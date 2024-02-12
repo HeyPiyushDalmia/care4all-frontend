@@ -1,5 +1,8 @@
 import React from "react";
 import { IoMdPaw } from "react-icons/io";
+import { TbDog } from "react-icons/tb";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 import herosectionimg from './../assets/img/herosectionimage2.jpg'
 import home_slider_image1 from './../assets/img/home-slider-image1.jpg'
 export default function index() {
@@ -38,7 +41,7 @@ export default function index() {
 <div>
 <div class="flex justify-center space-x-4 py-8 bg-white">
   <div class="flex flex-col items-center p-6 space-y-3 rounded-lg shadow-md">
-    
+  <TbDog className="services_icons"/>
     <h3 className="text-lg font-semibold">Grooming Services</h3>
     <p className="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </div>
@@ -81,7 +84,18 @@ export default function index() {
 
 {/* slider */}
 
-
+<Swiper
+      spaceBetween={50}
+      slidesPerView={1}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+      className="slider"
+    >
+      <SwiperSlide><img src={home_slider_image1} alt="home slider image"/></SwiperSlide>
+      <SwiperSlide><img src={home_slider_image1} alt="home slider image"/></SwiperSlide>
+      <SwiperSlide><img src={home_slider_image1} alt="home slider image"/></SwiperSlide>
+      <SwiperSlide><img src={home_slider_image1} alt="home slider image"/></SwiperSlide>
+    </Swiper>
   </>
   );
 }
