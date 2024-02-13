@@ -42,7 +42,7 @@ export default function index() {
 <div class="flex justify-center space-x-4 py-8 bg-white">
   <div class="flex flex-col items-center p-6 space-y-3 rounded-lg shadow-md">
   <TbDog className="services_icons"/>
-    <h3 className="text-lg font-semibold">Grooming Services</h3>
+    <h3 className="text-lg font-semibold">Adoption</h3>
     <p className="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </div>
   <div class="flex flex-col items-center p-6 space-y-3 rounded-lg shadow-md">
