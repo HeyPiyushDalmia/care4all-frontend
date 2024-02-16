@@ -23,6 +23,22 @@
 .loginbutton {
   margin-left: 10px;
 }
+
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
 /* .imgsize{
     mix-blend-mode: multiply;
 
@@ -140,6 +156,18 @@ p {
 .card2{
   margin-left: 400px;
   margin-top: 10px;
+  
+}
+
+
+
+
+/* login page */
+
+.login_image
+{object-fit: fill;
+  height: 600px;
+  width: 100%;
   
 }
 
