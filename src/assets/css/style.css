@@ -171,6 +171,37 @@ p {
   
 }
 
+.forget_password{
+  margin-left: auto;
+  margin-right: auto;
+  justify-self: center;
+  align-self: center;
+  font-size: 16px;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.forget_password:hover
+{
+color: #ff5a1f;
+}
+
+.create_new_account
+{
+  font-size: 16px;
+  margin-top: 10px;
+  
+}
+
+.ngo_Login{
+  margin-left: auto;
+  margin-right: auto;
+  justify-self: center;
+  align-self: center;
+  /* font-size: 16px; */
+  display: block;
+}
 
 
 /* footer css */
@@ -182,3 +213,5 @@ footer {
 .footer_icons{
   font-size: 25px;
 }
+
+
