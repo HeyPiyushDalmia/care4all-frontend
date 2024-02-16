@@ -43,22 +43,22 @@ export default function Footer() {
             </div>
         </nav>
         <div class="flex justify-center mt-8 space-x-6">
-            <a href="https://www.facebook.com" className="text-gray-400 hover:text-orange-500">
+            <a href="https://www.facebook.com" className="text-gray-400 hover:text-blue-500">
                 <span className="sr-only">Facebook</span>
-                  <FaFacebook className="footer_icons" />
+                  <FaFacebook className="footer_icons " />
            
             </a>
-            <a href="#" className="text-gray-400 hover:text-orange-500">
+            <a href="/" className="text-gray-400 hover:text-pink-500">
                 <span className="sr-only">Instagram</span>
-                <FaInstagram className="footer_icons"/>
+                <FaInstagram className="footer_icons "/>
             </a>
-            <a href="#" class="text-gray-400 hover:text-orange-500">
+            <a href="/" class="text-gray-400 hover:text-black">
                 <span class="sr-only">Twitter</span>
-             <FaSquareXTwitter className="footer_icons"/>
+             <FaSquareXTwitter className="footer_icons "/>
             </a>
-            <a href="#" className="text-gray-400 hover:text-orange-500">
+            <a href="/" className="text-gray-400 hover:text-orange-500">
                 <span className="sr-only">G-mail</span>
-                <SiGmail className="footer_icons"/>
+                <SiGmail className="footer_icons "/>
             </a>
             
         </div>
