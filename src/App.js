@@ -5,6 +5,8 @@ import Header from './components/Header'
 import Login from './components/Login'
 import About from './components/About'
 import Adopter_signup from './components/Adopter_signup'
+import Adopt_signup from './components/Adopt_signup'
+
 import './../src/assets/css/style.css'
 
 import { Routes as Switch, Route, BrowserRouter } from 'react-router-dom';
@@ -21,6 +23,7 @@ function App() {
     <Route path='/login' element={<Login/>}/>
     <Route path='/about' element={<About/>}/>
     <Route path ='/adopter_signup' element={<Adopter_signup/>}/>
+    <Route path ='/adopt_signup' element={<Adopt_signup/>}/>
 
     </Switch>
     </BrowserRouter>
