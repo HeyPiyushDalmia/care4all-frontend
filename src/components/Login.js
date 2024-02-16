@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from './../assets/img/logo.png'
-import herosectionimage2 from './../assets/img/herosectionimage2.jpg' 
-import Dropdown from 'react-bootstrap/Dropdown';
+import herosectionimage2 from './../assets/img/loginpageimage.jpg' 
+
 
 export default function Login() {
   return (
@@ -15,7 +15,7 @@ export default function Login() {
                             <button
                                 className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-orange-200 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline">
                                 <div className="bg-white p-2 rounded-full">
-                                   <img src={logo}></img>
+                                   <img src={logo} alt='Logo is not found'></img>
                                 </div>
                             </button>
     
@@ -24,7 +24,7 @@ export default function Login() {
                         <div className="my-12 border-b text-center">
                             <div
                                 className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
-                                Or sign In with Cartesian E-mail
+                               ADOPTER LOGIN
                             </div>
                         </div>
     
@@ -43,12 +43,12 @@ export default function Login() {
                                 </span>
                             </button>
                             <p className="mt-6 text-xs text-gray-600 text-center">
-                                I agree to abide by Cartesian Kinetics
-                                <a href="#" className="border-b border-gray-500 border-dotted">
+                                I agree to abide by Care 4 All
+                                <a href="/" className="border-b border-gray-500 border-dotted">
                                     Terms of Service
                                 </a>
                                 and its
-                                <a href="#" className="border-b border-gray-500 border-dotted">
+                                <a href="/" className="border-b border-gray-500 border-dotted">
                                     Privacy Policy
                                 </a>
                             </p>
@@ -56,9 +56,9 @@ export default function Login() {
                     </div>
                 </div>
             </div>
-            <div className="flex-1 bg-orange-200 text-center hidden lg:flex">
+            <div className="flex-1 bg-orange-200 text-center hidden lg:flex ">
                 <div className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat">
-<img src={herosectionimage2}/>
+<img src={herosectionimage2} alt="login page customimage not found" className="login_image" />
                 </div>
             </div>
         </div>

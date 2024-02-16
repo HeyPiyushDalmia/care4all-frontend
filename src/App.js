@@ -5,7 +5,6 @@ import Header from './components/Header'
 import Login from './components/Login'
 import About from './components/About'
 import Adopter_signup from './components/Adopter_signup'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './../src/assets/css/style.css'
 
 import { Routes as Switch, Route, BrowserRouter } from 'react-router-dom';
