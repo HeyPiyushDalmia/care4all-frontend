@@ -218,5 +218,11 @@ footer {
 
 .adopt_main_div
 {
-  
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 80%;
+  height: 98%;
+  justify-self: center;
+  align-self: center;
 }

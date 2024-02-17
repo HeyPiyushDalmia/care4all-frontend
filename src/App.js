@@ -6,6 +6,7 @@ import Header from './components/Header'
 import About from './components/About'
 import Adopter_signup from './components/Adopter_signup'
 import Adopt_signup from './components/Adopt_signup'
+import Ngo_signup from './components/Ngo_signup'
 import Adopter_login from './components/Adopter_login'
 import Ngo_login from './components/Ngo_login'
 
@@ -26,6 +27,7 @@ function App() {
     <Route path ='/adopter_signup' element={<Adopter_signup/>}/>
     <Route path ='/adopt_signup' element={<Adopt_signup/>}/>
     <Route path ='/Adopter_signup' element={<Adopter_signup/>}/>
+    <Route path ='/Adopter_signup' element={<Ngo_signup/>}/>
     <Route path ='/Adopter_login' element={<Adopter_login/>}/>
     <Route path ='/Ngo_login' element={<Ngo_login/>}/>
     
