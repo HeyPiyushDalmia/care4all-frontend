@@ -55,7 +55,7 @@ export default function Ngo_login() {
                         </span>
                     </span>
                         
-                    <a href="/" className="forget_password create_new_account">
+                    <a href="/Ngo_signup" className="forget_password create_new_account">
                                 Create new account
                             </a>
                     </div>

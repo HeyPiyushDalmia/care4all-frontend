@@ -56,7 +56,7 @@ export default function Adopter_login() {
                             </span>
                         </span>
                             
-                        <a href="/Adopter_signup" className="forget_password create_new_account">
+                        <a href="/Adopt_signup" className="forget_password create_new_account">
                                     Create new account
                                 </a>
                         </div>

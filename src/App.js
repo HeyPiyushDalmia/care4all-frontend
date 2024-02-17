@@ -27,7 +27,7 @@ function App() {
     <Route path ='/adopter_signup' element={<Adopter_signup/>}/>
     <Route path ='/adopt_signup' element={<Adopt_signup/>}/>
     <Route path ='/Adopter_signup' element={<Adopter_signup/>}/>
-    <Route path ='/Adopter_signup' element={<Ngo_signup/>}/>
+    <Route path ='/Ngo_signup' element={<Ngo_signup/>}/>
     <Route path ='/Adopter_login' element={<Adopter_login/>}/>
     <Route path ='/Ngo_login' element={<Ngo_login/>}/>
     
