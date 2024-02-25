@@ -5,10 +5,9 @@ import about_card1 from "../assets/img/about_card1.jpg";
 export default function About() {
   return (
     <>
-      {/* <div classNameName='about_container'> */}
       <img
         src={about_img1}
-        alt="Image not found..."
+        alt="aboutImage not found..."
         className=" about_main_img"
       />
 
@@ -18,10 +17,10 @@ export default function About() {
           "Where Compassion Meets Companionship"
         </h3>
       </div>
-      {/* </div> */}
+      
 
       <div>
-        <h2 className="about_main_heading">---WHAT IS Care4All??---</h2>
+        <h2 className="about_main_heading text-center">---WHAT IS Care4All??---</h2>
         <p>
           At Care4All, we believe that every pet deserves a loving home and
           every home deserves the joy that comes with a furry, feathered, or
@@ -43,24 +42,41 @@ export default function About() {
           a world of difference.
         </p>
       </div>
-
-      <div class ="about_cards">
+      
+      <div style={{display: 'flex', alignItems: 'center', backgroundColor: 'green', justifyContent: 'space-between'}} className="mt-65">
+        <div style = {{height: '40%', width: '100%', backgroundColor: 'red'}}>
         <div className="relative bg-orange-50 p-6 rounded-lg shadow-lg flex items-center justify-center w-[300px] h-[250px]">
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="rounded-full border-4 border-[#FFA500] flex items-center justify-center w-[220px] h-[220px]">
-              <img
-                src={about_card1}
-                alt="Man with dog"
-                className="rounded-full about_image_card"
-              />
+            <div className="rounded-full border-4 border-[#FFA500] flex items-center justify-center w-[220px] h-[220px">
+              <img src={about_card1} alt="Man with dog" className="rounded-full about_image_card"/>
             </div>
           </div>
-          <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-white rounded-full shadow-lg flex items-center justify-center w-12 h-12  border-500">
+          <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-white rounded-full shadow-lg flex items-center justify-center w-12 h-12  border-500 ">
             <span className="text-lg font-bold">1</span>
           </div>
         </div>
+        </div> 
+        
 
-        <div className="relative bg-orange-50 p-6 rounded-lg shadow-lg flex items-center justify-center w-[300px] h-[250px] card2">
+        <div style={{height: '40%', width: '100%', backgroundColor: 'red'}}>
+        <h1>Hello</h1>
+        </div>
+        <div style={{height: '40%', width: '100%', backgroundColor: 'red'}}>
+        <h1>Hello</h1>
+        </div>
+        
+        {/* <div className="relative bg-orange-50 p-6 rounded-lg shadow-lg flex items-center justify-center w-[300px] h-[250px]">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="rounded-full border-4 border-[#FFA500] flex items-center justify-center w-[220px] h-[220px">
+              <img src={about_card1} alt="Man with dog" className="rounded-full about_image_card"/>
+            </div>
+          </div>
+          <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-white rounded-full shadow-lg flex items-center justify-center w-12 h-12  border-500 about_cards">
+            <span className="text-lg font-bold">1</span>
+          </div>
+        </div> */}
+
+        {/* <div className="relative bg-orange-50 p-6 rounded-lg shadow-lg flex items-center justify-center w-[300px] h-[250px] card2">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="rounded-full border-4 border-[#FFA500] flex items-center justify-center w-[220px] h-[220px]">
               <img
@@ -71,10 +87,10 @@ export default function About() {
             </div>
           </div>
           <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-white rounded-full shadow-lg flex items-center justify-center w-12 h-12  border-500">
-            <span className="text-lg font-bold">1</span>
-          </div>
+            <span className="text-lg font-bold">2</span>
+          </div> */}
 
-</div>
+{/* </div> */}
       </div>
      
     </>

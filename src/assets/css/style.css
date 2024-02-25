@@ -126,6 +126,10 @@
   color: rgb(250, 249, 247);
 }
 
+.mt-65{
+  margin-top: 65px;
+}
+
 p {
   font-size: 16px;
   color: black;
@@ -138,7 +142,7 @@ p {
   height: 200 px;
   aspect-ratio: 200/200;
   object-fit: cover;
-  /* display: inline; */
+  display: inline;
 }
 .about_image_card2 {
   position: relative;
@@ -149,7 +153,7 @@ p {
 }
 
 .about_cards{
-  display: inline;
+ display: inline;
   
 }
 
@@ -158,9 +162,6 @@ p {
   margin-top: 10px;
   
 }
-
-
-
 
 /* login page */
 
@@ -250,4 +251,11 @@ footer {
   align-self: center;
 /* opacity: 0; */
 
+}
+
+
+
+
+.cards{
+  flex-direction:row;
 }
