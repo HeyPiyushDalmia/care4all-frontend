@@ -1,5 +1,5 @@
 // import './App.css'
-import Index from './components/Index'
+import Index from './components/index'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import About from './components/About'
@@ -22,7 +22,7 @@ function App() {
     <Switch>
     <Route path='/' element={<Index/>}/>
     <Route path='/about' element={<About/>}/>
-    <Route path ='/dopt_signup' element={<Adopt_signup/>}/>
+    <Route path ='/Adopt_signup' element={<Adopt_signup/>}/>
     <Route path ='/Ngo_signup' element={<Ngo_signup/>}/>
     <Route path ='/Adopter_login' element={<Adopter_login/>}/>
     <Route path ='/Ngo_login' element={<Ngo_login/>}/>
