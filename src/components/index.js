@@ -7,7 +7,7 @@ import herosectionimg from "./../assets/img/herosectionimage2.jpg";
 import home_slider_image1 from "./../assets/img/home-slider-image1.jpg";
 import { useState } from "react";
 
- function Index() {
+function Index() {
   const [slider] = useState([
     {
       img: home_slider_image1,
@@ -25,7 +25,7 @@ import { useState } from "react";
   return (
     <>
       {/* Hero section  */}
-      <section className="flex flex-wrap bgcolor">
+      <section className="flex flex-wrap bgcolor 2xl">
         <div className="w-full sm:w-8/12 mb-10">
           <div className="container mx-auto h-full sm:p-10">
             <nav className="flex px-4 justify-between items-center">
@@ -123,7 +123,7 @@ import { useState } from "react";
 
       {/* slider */}
 
-       <Swiper
+      <Swiper
         spaceBetween={50}
         slidesPerView={1}
         onSlideChange={() => console.log("slide change")}
@@ -137,7 +137,7 @@ import { useState } from "react";
             </SwiperSlide>
           );
         })}
-      </Swiper> 
+      </Swiper>
     </>
   );
 }
