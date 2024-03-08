@@ -1,4 +1,9 @@
 /* INDEX.JSX */
+/* use variable */
+:root {
+  --orange: #ff5a1f;
+  --white: #ffffff;
+}
 
 .logo {
   height: 50px;
@@ -15,7 +20,7 @@
 }
 
 .hero_para {
-  color: rgb(190, 91, 10);
+  color: #be5b0a;
   font-weight: bolder;
   align-content: center;
 }
@@ -23,8 +28,6 @@
 .loginbutton {
   margin-left: 10px;
 }
-
-
 
 /* Links inside the dropdown */
 .dropdown-content a {
@@ -35,10 +38,14 @@
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.show {
+  display: block;
+}
 /* .imgsize{
     mix-blend-mode: multiply;
 
@@ -57,15 +64,15 @@
   width: 90%;
 }
 
-.services_icons{
+.services_icons {
   font-size: 30px;
-  color: #ff5a1f;
+  color: var(--orange);
 }
 
 .fabone {
   display: inline;
   font-size: 20px;
-  color: #ff5a1f;
+  color: var(--orange);
 }
 
 .home-about-image {
@@ -73,27 +80,20 @@
   margin-left: 100px;
 }
 
-.slider{
+.slider {
   clear: both;
   object-fit: cover;
   height: 600px;
-  width: 96%
-  
-  ;
-
+  width: 96%;
 }
 
-.slider_para{
+.slider_para {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   /* color: white; */
 }
-
-
-
-
 
 /* ABOUT PAGE */
 
@@ -105,7 +105,7 @@
   height: 500px;
   justify-self: center;
   align-self: center;
-  
+
   filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
 }
 
@@ -126,7 +126,7 @@
   color: rgb(250, 249, 247);
 }
 
-.mt-65{
+.mt-65 {
   margin-top: 65px;
 }
 
@@ -152,27 +152,24 @@ p {
   display: inline;
 }
 
-.about_cards{
- display: inline;
-  
+.about_cards {
+  display: inline;
 }
 
-.card2{
+.card2 {
   margin-left: 400px;
   margin-top: 10px;
-  
 }
 
 /* login page */
 
-.login_image
-{object-fit: fill;
+.login_image {
+  object-fit: fill;
   height: 600px;
   width: 100%;
-  
 }
 
-.forget_password{
+.forget_password {
   margin-left: auto;
   margin-right: auto;
   justify-self: center;
@@ -183,19 +180,16 @@ p {
   text-align: center;
 }
 
-.forget_password:hover
-{
-color: #ff5a1f;
+.forget_password:hover {
+  color: var(--orange);
 }
 
-.create_new_account
-{
+.create_new_account {
   font-size: 16px;
   margin-top: 10px;
-  
 }
 
-.ngo_Login{
+.ngo_Login {
   margin-left: auto;
   margin-right: auto;
   justify-self: center;
@@ -204,22 +198,17 @@ color: #ff5a1f;
   display: block;
 }
 
-
 /* footer css */
 
 footer {
   clear: both;
 }
 
-.footer_icons{
+.footer_icons {
   font-size: 25px;
 }
 
-
-
-
-.adopt_main_div
-{
+.adopt_main_div {
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -229,33 +218,26 @@ footer {
   align-self: center;
   background-color: white;
   /* mix-blend-mode:luminosity; */
-  
-
 }
-.adopt_signup_head{
+.adopt_signup_head {
   /* margin-left: auto;
   margin-right: auto;
   display: block;
   justify-self: center;
   align-self: center; */
   text-align: center;
-
 }
-.register_button
-{margin-left: auto;
+.register_button {
+  margin-left: auto;
   margin-right: auto;
   display: block;
   width: 60%;
   height: 98%;
   justify-self: center;
   align-self: center;
-/* opacity: 0; */
-
+  /* opacity: 0; */
 }
 
-
-
-
-.cards{
-  flex-direction:row;
+.cards {
+  flex-direction: row;
 }
