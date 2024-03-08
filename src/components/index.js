@@ -25,7 +25,7 @@ function Index() {
   return (
     <main>
       {/* Hero section  */}
-      <section className="flex flex-wrap bgcolor">
+      <section className="flex flex-wrap bgcolor 2xl">
         <div className="w-full sm:w-8/12 mb-10">
           <div className="container mx-auto h-full sm:p-10">
             <nav className="flex px-4 justify-between items-center">
