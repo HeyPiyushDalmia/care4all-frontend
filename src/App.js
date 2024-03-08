@@ -12,11 +12,6 @@ import "./../src/assets/css/style.css";
 
 import { Routes as Switch, Route, BrowserRouter } from "react-router-dom";
 
-import "./../src/assets/css/style.css";
-import "swiper/css";
-
-import { Routes as Switch, Route, BrowserRouter } from "react-router-dom";
-
 function App() {
   return (
     <>
