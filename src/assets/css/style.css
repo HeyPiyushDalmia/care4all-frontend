@@ -130,7 +130,11 @@
   margin-top: 65px;
 }
 
-p {
+.about_cards_desc
+{
+  margin-top: 500px;
+}
+p{
   font-size: 16px;
   color: black;
   width: 90%;

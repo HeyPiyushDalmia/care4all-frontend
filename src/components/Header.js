@@ -14,7 +14,7 @@ export default function Header() {
           <div class="flex items-center lg:order-2">
             {
                 user ? <a href="/Adopter_login">
-                <button class="bg-orange-500 text-white text-2l font-medium px-4 py-2 rounded shadow loginbutton">
+                <button class="bg-orange-500 text-white text-2l font-medium  py-2 rounded shadow loginbutton">
                   PROFILE
                 </button>
               </a> : <a href="/Adopter_login">
