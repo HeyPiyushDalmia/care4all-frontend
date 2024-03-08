@@ -19,7 +19,7 @@ export default function Ngo_login() {
             <div className=" flex flex-col items-center">
                 <div className="w-full flex-1  ">
                 <a  href="/Adopter_login" >
- <button class="mt-5 tracking-wide font-semibold bg-orange-400 text-white-500 w-48 py-4 rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none ml-auto mr-auto" >ADOPTER LOGIN
+ <button className="login_button flex_ic       w-48  hover: ml-auto mr-auto" >ADOPTER LOGIN
    </button>
    </a> 
 
@@ -32,13 +32,13 @@ export default function Ngo_login() {
 
                     <div className="mx-auto max-w-xs">
                         <input
-                            className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                            className="login_input"
                             type="text" placeholder="NGO Registration number" />
                         <input
-                            className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                            className="login_input"
                             type="password" placeholder="Password" />
                         <button
-                            className="mt-5 tracking-wide font-semibold bg-orange-400 text-white-500 w-full py-4 rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                            className="login_button flex_ic  w-full  hover: ml-auto mr-auto  ">
 
                             <span className="ml-">
                                 Log in

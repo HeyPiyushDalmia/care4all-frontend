@@ -43,8 +43,8 @@ export default function About() {
         </p>
       </div>
       
-      <div style={{display: 'flex', alignItems: 'center', backgroundColor: 'green', justifyContent: 'space-between'}} className="mt-65">
-        <div style = {{height: '40%', width: '100%', backgroundColor: 'red'}}>
+      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}} className="ml-65 about_cards">
+        <div style = {{height: '40%', width: '100%'}}>
         <div className="relative bg-orange-50 p-6 rounded-lg shadow-lg flex items-center justify-center w-[300px] h-[250px]">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="rounded-full border-4 border-[#FFA500] flex items-center justify-center w-[220px] h-[220px">
@@ -55,14 +55,38 @@ export default function About() {
             <span className="text-lg font-bold">1</span>
           </div>
         </div>
+              <p>Piyush Dalmia MCA Jagan institute of managementt studies rohini sec 5</p>
         </div> 
         
 
-        <div style={{height: '40%', width: '100%', backgroundColor: 'red'}}>
-        <h1>Hello</h1>
+        <div style={{height: '40%', width: '100%'}}>
+      
+
+        <div className="relative bg-orange-50 p-6 rounded-lg shadow-lg flex items-center justify-center w-[300px] h-[250px]">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="rounded-full border-4 border-[#FFA500] flex items-center justify-center w-[220px] h-[220px">
+              <img src={about_card1} alt="Man with dog" className="rounded-full about_image_card"/>
+            </div>
+          </div>
+          <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-white rounded-full shadow-lg flex items-center justify-center w-12 h-12  border-500 ">
+            <span className="text-lg font-bold">2</span>
+          </div>
         </div>
-        <div style={{height: '40%', width: '100%', backgroundColor: 'red'}}>
-        <h1>Hello</h1>
+
+        </div>
+
+        <div style={{height: '40%', width: '100%'}}>
+        <div className="relative bg-orange-50 p-6 rounded-lg shadow-lg flex items-center justify-center w-[300px] h-[250px]">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="rounded-full border-4 border-[#FFA500] flex items-center justify-center w-[220px] h-[220px">
+              <img src={about_card1} alt="Man with dog" className="rounded-full about_image_card"/>
+            </div>
+          </div>
+          <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-white rounded-full shadow-lg flex items-center justify-center w-12 h-12  border-500 ">
+            <span className="text-lg font-bold">3</span>
+          </div>
+        </div>
+
         </div>
         
         {/* <div className="relative bg-orange-50 p-6 rounded-lg shadow-lg flex items-center justify-center w-[300px] h-[250px]">
