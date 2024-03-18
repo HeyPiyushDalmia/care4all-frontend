@@ -17,71 +17,50 @@ export default function Ngo_signup() {
         <div className="p-6 space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <label
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="full-name"
-              >
+              <label className="signup_label peer-disabled:opacity-70" for="full-name">
                 NGO Name
               </label>
-              <input
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              <input className="signup_input border-input bg-background ring-offset-background   placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring"
                 id="full-name"
                 placeholder="Enter your full name"
-                required=""
-              />
+                required="" />
             </div>
             <div className="space-y-2">
-              <label
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="phone-number"
-              >
+              <label className="signup_label peer-disabled:opacity-70" for="phone-number">
                 Contact Number
               </label>
-              <input
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              <input className="signup_input border-input bg-background ring-offset-background   placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring"
                 id="phone-number"
                 placeholder="Enter your phone number"
                 type="tel"
-                required=""
-              />
+                required="" />
             </div>
             <div className="space-y-2">
-              <label
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="address"
-              >
+              <label className="signup_label peer-disabled:opacity-70" for="address" >
                 Address
               </label>
-              <input
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              <input className="signup_input border-input bg-background ring-offset-background   placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring "
                 id="address"
                 placeholder="Enter your address"
-                required=""
-              />
+                required="" />
             </div>
             <div className="space-y-2">
               <label
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="pincode"
-              >
+                className="signup_label peer-disabled:opacity-70" for="pincode" >
                 Pincode
               </label>
               <input
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                className="signup_input border-input bg-background ring-offset-background   placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring"
                 id="pincode"
                 placeholder="Enter your pincode"
-                required=""
-              />
+                required="" />
             </div>
             <div className="space-y-2">
-              <label
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="state"
-              >
+              <label   className="signup_label peer-disabled:opacity-70" for="state">
                 State
               </label>
               <input
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                className="signup_input border-input bg-background ring-offset-background   placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring"
                 id="state"
                 placeholder="Enter your state"
                 list="states"
@@ -97,13 +76,12 @@ export default function Ngo_signup() {
             </div>
             <div className="space-y-2">
               <label
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="city"
+                className="signup_label peer-disabled:opacity-70" for="city"
               >
                 City
               </label>
               <input
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                className="signup_input border-input bg-background ring-offset-background   placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring"
                 id="city"
                 placeholder="Enter your city"
                 list="cities"
@@ -119,13 +97,12 @@ export default function Ngo_signup() {
             </div>
             <div className="space-y-2">
               <label
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="email"
+                className="signup_label peer-disabled:opacity-70" for="email"
               >
                 Email ID
               </label>
               <input
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                className="signup_input border-input bg-background ring-offset-background   placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring"
                 id="email"
                 placeholder="Enter your email"
                 required=""
@@ -150,13 +127,12 @@ export default function Ngo_signup() {
 
             <div className="space-y-2">
               <label
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="aadhar"
+                className="signup_label peer-disabled:opacity-70" for="aadhar"
               >
                 Niti Ayog Registeration Number
               </label>
               <input
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                className="signup_input border-input bg-background ring-offset-background   placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring"
                 id="aadhar"
                 placeholder="Enter NGO registration number given by Niti Ayog "
                 required=""
@@ -164,13 +140,12 @@ export default function Ngo_signup() {
             </div>
             <div className="space-y-2">
               <label
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="password"
+                className="signup_label peer-disabled:opacity-70" for="password"
               >
                 Password
               </label>
               <input
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                className="signup_input border-input bg-background ring-offset-background   placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring"
                 id="password"
                 placeholder="Enter your password"
                 required=""
