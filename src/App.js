@@ -1,5 +1,5 @@
 // import './App.css'
-import Index from './components/Index'
+import Index from './components/index'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import About from './components/About'
