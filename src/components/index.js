@@ -95,7 +95,7 @@ function Index() {
       {/* Brief About the website */}
       <section>
         <img
-          src="https://tailwag.progressionstudios.com/wp-content/uploads/2022/04/dog-P228UWM.jpg"
+          src="https://149751761.v2.pressablecdn.com/wp-content/uploads/2022/04/dog-P228UWM.jpg"
           className="home-about-image"
           alt=""
         />

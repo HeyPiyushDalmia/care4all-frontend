@@ -172,12 +172,7 @@
   margin-bottom: 65px;
 }
 
-
-.about_cards_desc
-{
-  margin-top: 500px;
-}
-p{
+p {
   font-size: 16px;
   color: black;
   width: 90%;
@@ -344,7 +339,7 @@ color: #ff5a1f;
   background-color: white;
   /* mix-blend-mode:luminosity; */
   
-  
+
 }
 .adopt_signup_head{
   /* margin-left: auto;
@@ -353,7 +348,7 @@ color: #ff5a1f;
   justify-self: center;
   align-self: center; */
   text-align: center;
-  
+
 }
 .register_button
 {margin-left: auto;
@@ -363,12 +358,8 @@ color: #ff5a1f;
   height: 98%;
   justify-self: center;
   align-self: center;
-  /* opacity: 0; */
-  
-}
+/* opacity: 0; */
 
-.cards{
-  flex-direction:row;
 }
 
 
@@ -377,6 +368,10 @@ color: #ff5a1f;
 .cards{
   flex-direction:row;
 }
+
+
+
+
 
 
 
@@ -408,7 +403,7 @@ color: #ff5a1f;
   font-weight: 600;
   padding: 5px 5px 5px 5px;
 }
-
 .footer_icons{
   font-size: 25px;
 }
+
