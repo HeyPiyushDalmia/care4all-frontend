@@ -407,3 +407,46 @@ color: #ff5a1f;
   font-size: 25px;
 }
 
+
+
+
+
+/*Adopt page*/
+.grid-container
+  {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: auto auto auto auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .grid-items
+  {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    /* font-size: 30px; */
+    /* text-align: center; */
+  }
+  
+  .adopt_grid_img
+  {
+   height: 58%;
+   width: 100%; 
+  }
+  
+ .know_more_button
+ {
+  line-height: 1;
+    text-align: center;
+    display: inline-block;
+    padding: 16px 34px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
+    background: #fa524f;
+    border-radius: 40px;
+    letter-spacing: 0em;
+    margin-top: 25px;
+ }
