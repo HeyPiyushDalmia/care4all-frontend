@@ -519,7 +519,7 @@ color: #ff5a1f;
  }
 
                                     /* E-Learning Page */
- a{
+  .elearning_a{
   color: blue;
   text-decoration: underline;
  }
