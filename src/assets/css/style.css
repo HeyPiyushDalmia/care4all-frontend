@@ -523,6 +523,12 @@ color: #ff5a1f;
   color: blue;
   text-decoration: underline;
  }
+ .elearning_heading_a{
+  text-decoration: underline;
+ }
+ .elearning_heading_a:hover{
+  color: blue;
+ }
 
  * {
   box-sizing: border-box;
