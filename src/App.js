@@ -16,6 +16,7 @@ import { Routes as Switch, Route, BrowserRouter } from 'react-router-dom';
 
 
 
+
 function App() {
   return (
     <>
@@ -31,7 +32,6 @@ function App() {
     <Route path = '/dashboard' element={<Dashboard/>}/>
     <Route path = "/adopt" element={<Adopt/>}/>
     <Route path = "/elearning" element={<Elearning/>}/>
-
     </Switch>
     </BrowserRouter>
      <Footer/>
