@@ -9,9 +9,11 @@ import Adopter_login from './components/Adopter_login'
 import Ngo_login from './components/Ngo_login'
 import Dashboard from './components/dashboard'
 import Adopt from './components/adopt'
+import Elearning from './components/elearning'
 import './../src/assets/css/style.css'
 
 import { Routes as Switch, Route, BrowserRouter } from 'react-router-dom';
+
 
 
 
@@ -29,6 +31,7 @@ function App() {
     <Route path ='/Ngo_login' element={<Ngo_login/>}/>
     <Route path = '/dashboard' element={<Dashboard/>}/>
     <Route path = "/adopt" element={<Adopt/>}/>
+    <Route path = "/elearning" element={<Elearning/>}/>
     </Switch>
     </BrowserRouter>
      <Footer/>

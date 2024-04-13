@@ -131,7 +131,8 @@
 
 /* ABOUT PAGE */
 
-.about_main_img {
+.about_main_img 
+{
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -139,37 +140,29 @@
   height: 500px;
   justify-self: center;
   align-self: center;
-  
-  filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+    filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
 }
 
-.about_welcome {
+.about_welcome 
+{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.about_main_heading {
+
+.about_main_heading 
+{
   font-size: 50px;
   font-weight: bolder;
   color: rgb(248, 184, 88);
 }
-.about_main_quote {
+
+.about_main_quote
+{
   font-size: 20px;
   font-weight: 600;
   color: rgb(250, 249, 247);
-}
-
-.about_cards
-{
-  background-color: green;
-}
-
-.ml-65{
-  margin-top: 65px;
-  padding-left: 50px;
-  padding-right : 50px;
-  margin-bottom: 65px;
 }
 
 p {
@@ -179,6 +172,48 @@ p {
   text-justify: inter-word;
   text-align: justify;
 }
+
+.card_main_div
+{
+  margin-top: 20px;
+  border: 2px solid red;
+  background-color: yellow;
+  display:grid;
+  /* width: fit-content; */
+  width: 100%;
+    height: max-content;
+    gap: 100px;
+    grid-template-columns: auto auto auto;
+    /* margin-left: 5%;
+    margin-right: 5%; */
+    margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+  .card_main_div{
+    grid-template-columns:100%;
+    /* flex-direction: rows; */
+  }
+}
+
+.about_cards
+{
+  background-color: green;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  /* background-color: #faf3eb; */
+  height: 100px;
+}
+
+.ml-65{
+  margin-top: 65px;
+  padding-left: 50px;
+  padding-right : 50px;
+  margin-bottom: 65px;
+}
+
 .about_image_card {
   width: 200px;
   height: 200 px;
@@ -187,6 +222,7 @@ p {
   display: inline;
 }
 .about_image_card2 {
+  margin-top: 2px;
   position: relative;
   float: initial;
   margin-left: 400px;
@@ -194,9 +230,20 @@ p {
   display: inline;
 }
 
+
 .about_cards{
- display: inline;
-  
+ /* display: inline; */
+ display:grid;
+ /* flex-direction: row; */
+ width: fit-content;
+ height: max-content;
+ gap: 20px;
+ grid-template-columns: auto auto auto ;
+
+ margin-left: 10%;
+ margin-right: 10%;
+ /* margin-right: 20px; */
+ margin-bottom: 20px;
 }
 
 .card2{
@@ -284,6 +331,7 @@ p {
   outline-offset: 2px;
 }
 
+
 .login_button:hover
 {
   background-color: #71b475 ;  
@@ -326,21 +374,37 @@ color: #ff5a1f;
 
 
 
-
-.adopt_main_div
+/* Adopt Page: */
+.adopt_signup_img
 {
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
+}
+
+.adopt_signup_main_div
+{
+  margin-top: 10px;
+  margin-bottom: 2px;
   margin-left: auto;
   margin-right: auto;
   display: block;
   width: 80%;
-  height: 98%;
+  height: 50%;
   justify-self: center;
   align-self: center;
-  background-color: white;
+  color: #eaeffa;
+  font-size: larger;
+  font-weight: 500;
+  /* background-color: white; */
   /* mix-blend-mode:luminosity; */
   
 
 }
+/* .adopt_signup_img
+{
+  
+} */
+
 .adopt_signup_head{
   /* margin-left: auto;
   margin-right: auto;
@@ -348,6 +412,9 @@ color: #ff5a1f;
   justify-self: center;
   align-self: center; */
   text-align: center;
+  background-color: #eefcff;
+  color:#000000;
+  
 
 }
 .register_button
@@ -450,3 +517,82 @@ color: #ff5a1f;
     letter-spacing: 0em;
     margin-top: 25px;
  }
+
+                                    /* E-Learning Page */
+ a{
+  color: blue;
+  text-decoration: underline;
+ }
+
+ * {
+  box-sizing: border-box;
+}
+ .elearning_grid-container
+  {
+    display:grid;
+    /* flex-direction: row; */
+    width: fit-content;
+    height: max-content;
+    gap: 20px;
+    grid-template-columns: auto auto ;
+
+    margin-left: 10%;
+    margin-right: 10%;
+    /* margin-right: 20px; */
+    margin-bottom: 20px;
+    
+  }
+  @media (max-width: 800px) {
+    .elearning_grid-container{
+      grid-template-columns:100%;
+      /* flex-direction: rows; */
+    }
+  }
+  .elearning_grid-items
+  {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    margin-bottom: 10px;
+
+    /* font-size: 30px; */
+    text-align: center;
+    background-color: #faf3eb;
+    /* height:inherit; */
+    height: 100%;
+  }
+ .elearning_img
+ {
+  height: 300px;;
+   width: 80%; 
+   margin-left: auto;
+   margin-right: auto;
+ }
+ .elearning_youtube{
+  align-items: center;
+  justify-content: center;
+  margin-left: 16%;
+  /* margin-right: 5%; */
+
+ }
+ .video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  /* align-items: center;
+  align-self: center; */
+}
+
+.video-responsive iframe {
+  border:1px solid #000000;
+  left: 10px;
+  top: 0;
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  
+  box-shadow: 2px 10px 10px 2px rgb(75, 70, 70);
+  /* align-items: center;
+  align-self: center; */
+}
