@@ -59,10 +59,10 @@ export default function About() {
               <span className="text-lg font-bold">1</span>
             </div>
             </div>
-                <p>Piyush Dalmia MCA Jagan institute of managementt studies rohini sec 5</p>
+           <p>Piyush Dalmia MCA Jagan institute of managementt studies rohini sec 5</p>
            </div> 
-        </div>
-
+        {/* </div> */}
+        
         <div style={{height: '40%', width: '100%'}}>
           <div className="relative bg-orange-50 p-6 rounded-lg shadow-lg flex items-center justify-center w-[300px] h-[250px]">
             <div className="absolute inset-0 flex items-center justify-center">
@@ -74,6 +74,8 @@ export default function About() {
               <span className="text-lg font-bold">2</span>
             </div>
           </div>
+          <p>Piyush Dalmia MCA Jagan institute of managementt studies rohini sec 5</p>
+
         </div>
 
         <div style={{height: '40%', width: '100%'}}>
@@ -87,10 +89,14 @@ export default function About() {
               <span className="text-lg font-bold">3</span>
             </div>
           </div>
+          <p>Piyush Dalmia MCA Jagan institute of managementt studies rohini sec 5</p>
+
         </div>
       {/* </div> */}
 
  </div>    
+ </div>
+
     </>
   );
 }
