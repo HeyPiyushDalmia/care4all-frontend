@@ -4,6 +4,7 @@ import { TbDog } from "react-icons/tb";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import herosectionimg from "./../assets/img/herosectionimage2.jpg";
+import bestthingpetimg from "./../assets/img/home_knowyourpet.jpg"
 import home_slider_image1 from "./../assets/img/home-slider-image1.jpg";
 import { useState } from "react";
 
@@ -93,12 +94,15 @@ function Index() {
       <br />
 
       {/* Brief About the website */}
-      <section>
-        <img
-          src="https://149751761.v2.pressablecdn.com/wp-content/uploads/2022/04/dog-P228UWM.jpg"
+    
+      <div className="home-about">
+      <img
+          src={bestthingpetimg}
           className="home-about-image"
           alt=""
-        />
+          />        
+        <div className="home-margin-elements">
+
         <h1 className="home-about-heading">The Best For Your Pet</h1>
         <p className="home-about-para">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dicta,
@@ -107,18 +111,20 @@ function Index() {
           soluta!
         </p>
         <ol>
-          <li>
+          <li className="home-about-para"> 
             <IoMdPaw className="fabone" /> <span> Nutritious Diet </span>
           </li>
-          <li>
+          <li className="home-about-para">
             <IoMdPaw className="fabone" />{" "}
             <span> Regular Veterinary Care </span>
           </li>
-          <li>
+          <li className="home-about-para"> 
             <IoMdPaw className="fabone" /> <span> Grooming and Hygiene</span>
           </li>
         </ol>
-      </section>
+        </div>
+        </div>
+      
       <br />
 
       {/* slider */}
