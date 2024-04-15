@@ -10,7 +10,7 @@ import Ngo_login from './components/Ngo_login'
 import Dashboard from './components/dashboard'
 import Adopt from './components/adopt'
 import Elearning from './components/elearning'
-import Contact from './components/Contact'
+
 import Ngo_profile from './components/Ngo_profile'
 import './../src/assets/css/style.css'
 
@@ -34,6 +34,7 @@ function App() {
     <Route path = '/dashboard' element={<Dashboard/>}/>
     <Route path = "/adopt" element={<Adopt/>}/>
     <Route path = "/elearning" element={<Elearning/>}/>
+    <Route path="/Ngo_profile" element={<Ngo_profile/>}/>
     </Switch>
     </BrowserRouter>
      <Footer/>
