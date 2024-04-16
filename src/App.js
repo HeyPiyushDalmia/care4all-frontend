@@ -11,6 +11,8 @@ import Dashboard from './components/dashboard'
 import Adopt from './components/adopt'
 import Elearning from './components/elearning'
 import Contact from './components/Contact'
+import Adoptionform from './components/Adoptionform'
+import Adopter_dashboard from './components/Adopter_dashboard'
 import './../src/assets/css/style.css'
 
 import { Routes as Switch, Route, BrowserRouter } from 'react-router-dom';
@@ -34,6 +36,8 @@ function App() {
     <Route path = "/adopt" element={<Adopt/>}/>
     <Route path = "/elearning" element={<Elearning/>}/>
     <Route path ="/contact" element={<Contact/>}/>
+    <Route path ="/Adoptionform" element={<Adoptionform/>}/>
+    <Route path ="/Adopter_dashboard" element={<Adopter_dashboard/>}/>
     </Switch>
     </BrowserRouter>
      <Footer/>

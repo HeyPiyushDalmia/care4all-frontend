@@ -1,9 +1,40 @@
-import React from 'react'
+import React,{useState} from 'react'
+import { useNavigate } from "react-router-dom";
 import logo from './../assets/img/logo.png'
 import loginpageimage from './../assets/img/loginpageimage.jpg' 
 
 
-export default function Adopter_login() {
+const  Adopter_login = () => {
+  const navigate = useNavigate();
+     const [email, setEmail] = useState('');
+     const [password, setPassword] = useState('');
+
+    const loginUser = async (e) => 
+    {
+        e.preventDefault();
+        const res = await fetch("http://localhost:8000/api/users/login", {
+            method:"POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body:JSON.stringify({
+                email,
+                password
+            })
+        });
+
+        const data =res.json();
+        
+        if(res.status === 400 || !data){
+            window.alert("Invalid Credentials");
+        }
+        else{
+            window.alert("Login Successful");
+        navigate("/Adopter_dashboard");
+            
+        }
+    }
+
   return (
     <div className="min-h-0.5 bg-grey-100 text-gray-900 flex justify-center">
         <div className="max-w-screen-l m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
@@ -32,13 +63,16 @@ export default function Adopter_login() {
                         </div>
     
                         <div className="mx-auto max-w-xs">
-                            <input className="login_input " type="email" placeholder="Adopter Email" />
-                            <input className="login_input" type="password" placeholder="Password" />
-                            <button className="login_button flex_ic  w-full  hover: ml-auto mr-auto ">
+                            <form method = "POST" id="Adopter-login"> 
+                            <input className="login_input " type="email" value = {email} onChange={(e) => setEmail(e.target.value)} placeholder="Adopter Email" />
+                            <input className="login_input" type="password" value ={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
+                            <button className="login_button flex_ic  w-full  hover: ml-auto mr-auto " onClick={loginUser}>
                                 <span className="ml-">
                                     Log in
                                 </span>
                             </button>
+
+                            </form>
                             <a href="/" className="forget_password">
                                     Forget password
                                 </a>
@@ -66,3 +100,4 @@ export default function Adopter_login() {
     </div>
   )
 }
+export default Adopter_login

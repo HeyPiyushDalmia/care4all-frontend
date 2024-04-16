@@ -1,72 +1,13 @@
-import React, {useState} from "react";
-import { useNavigate } from "react-router-dom";
-import signup_img3 from '../assets/img/signup_img3.jpg'
-const Adopt_signup = () => {
-  const navigate = useNavigate();
+import React from 'react'
 
-  const [user,setUser] = useState({
-    fullname:"",phonenumber:"",address:"",pincode:"",state:"",city:"",email:"",dob:"",aadhar:"",password:""
-  });
-
-  let name, value;
-    const handleInputs = (e) =>
-    {
-      console.log(user);
-      name =e.target.name;
-       value = e.target.value;
-
-      setUser({...user, [name]:value});
-    }
-
-    const PostData = async (e) =>
-    {
-      e.preventDefault();
-      const {fullname, phonenumber, address, pincode, state, city, email, aadhar, password} = user;
-
-      const res = await fetch("http://localhost:8000/api/users",{
-        method: "POST",
-        headers: {
-          "Content-Type" : "application/json"
-        },
-        body: JSON.stringify({
-          name:fullname, phone:phonenumber, address, pincode, state, city, email, aadharCard:aadhar, password
-        })
-
-      });
-
-       const data = await res.json();
-       console.log(data);
-      if(res.status === 422 || !data){
-        window.alert("Invalid Registration");
-        console.log("Invalid Registertation");
-      }
-      else{
-        window.alert("Successful Registration");
-        console.log("Successful Registertation");
-        navigate("/Adopter_login");
-       
-      }
-
-
-
-    }
+export default function Adoptionform() {
   return (
-    <div>
-      <body className="adopt_signup_img" style={{ backgroundImage:`url(${signup_img3})` }} >
-      {/* <img src={adopt_signup_img}/> */}
-      <div className="rounded-lg border bg-card text-card-foreground shadow-sm w-full max-w-3xl px-0 adopt_signup_main_div"
+    <>
+      <h1 className="text-center font-semi text-4xl">Pet Adoption Form</h1>
+      <div>
+      <div className="rounded-lg border bg-card text-card-foreground shadow-sm w-full max-w-3xl px-0 adoption-form"
         data-v0-t="card"
       >
-        <div className="flex flex-col space-y-1.5 p-6 border-b adopt_signup_head">
-          <h3 className="font-semibold whitespace-nowrap tracking-tight text-3xl">
-            Adopter Registration
-          </h3>
-
-        </div>
-
-        <form method = "POST">
-
-        
         <div className="p-6 space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
@@ -74,15 +15,11 @@ const Adopt_signup = () => {
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 for="full-name"
               >
-                Full Name
+               Perspective Pet Parent
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
-                id="fullname"
-                name="fullname"
-                value={user.fullname}
-      onChange={handleInputs}
-      // (e)=>setUser({...user, fullname:e.target.value})
+                id="full-name"
                 placeholder="Enter your full name"
                 required=""
               />
@@ -90,17 +27,13 @@ const Adopt_signup = () => {
             <div className="space-y-2">
               <label
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="phonenumber"
-
+                for="phone-number"
               >
                 Contact Number
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
-                id="phonenumber"
-                name="phonenumber"
-                value={user.phonenumber}
-                onChange={handleInputs}
+                id="phone-number"
                 placeholder="Enter your phone number"
                 type="tel"
                 required=""
@@ -117,10 +50,6 @@ const Adopt_signup = () => {
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="address"
-                name="address"
-                value={user.address}
-                onChange={handleInputs}
-
                 placeholder="Enter your address"
                 required=""
               />
@@ -135,10 +64,6 @@ const Adopt_signup = () => {
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="pincode"
-                name="pincode"
-                value={user.pincode}
-                onChange={handleInputs}
-
                 placeholder="Enter your pincode"
                 required=""
                 size="6"
@@ -154,14 +79,11 @@ const Adopt_signup = () => {
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="state"
-                name="state"
-                value={user.state}
-                onChange={handleInputs}
                 placeholder="Enter your state"
                 list="states"
                 required=""
               />
-               <datalist id="states">
+              <datalist id="states">
                 <option value="Delhi"></option>
                 <option value="Haryana"></option>
                 <option value="Jammu And Kashmir"></option>
@@ -178,12 +100,7 @@ const Adopt_signup = () => {
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
-                id="city" 
-                name="city"
-                value={user.city}
-                onChange={handleInputs}
-
-                text-black
+                id="city"
                 placeholder="Enter your city"
                 list="cities"
                 required=""
@@ -206,84 +123,118 @@ const Adopt_signup = () => {
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="email"
-                name="email"
-                value={user.email}
-                onChange={handleInputs}
-
                 placeholder="Enter your email"
                 required=""
                 type="email"
               />
             </div>
+            
             <div className="space-y-2">
               <label
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="dob"
-              >
-                Date of Birth
-              </label>
-              <input
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-0 text-black"
-                id="dob"
-                name="dob"
-                value={user.dob}
-                onChange={handleInputs}
-
-                required=""
-                type="date"
-              />
-            </div>
-            <div className="space-y-2">
-              <label
-                className="text-sm fontbold  leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 for="aadhar"
               >
-                Aadhar Card
+                Name of Pet You Wish to Adopt
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="aadhar"
-                name="aadhar"
-                value={user.aadhar}
-                onChange={handleInputs}
+                placeholder="Name of Pet You Wish to Adopt "
+                required=""
+              />
+            </div>
+            
+            <div className="space-y-2">
+              <label
+                className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for=""
+              >
+                Are there children in the home? (If yes, fill)
+              </label>
+              <input
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
+                id=""
+                placeholder=""
+                required=""
+                type="text"
+              />
+            </div>
 
-                placeholder="Enter your Aadhar card number"
-                required="required"
-                type="number"
-                 
+            <div className="space-y-2">
+              <label
+                className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for=""
+              >
+                Will you crate your pet?*
+              </label>
+              <input
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
+                id=""
+                placeholder=""
+                required=""
+                type="text"
               />
             </div>
             <div className="space-y-2">
               <label
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="password"
+                for=""
               >
-                Password
+                How many hours per day would the pet be alone?*
+              </label>
+             <textarea cols="34" rows="2"></textarea>
+            </div>
+            
+
+            <div className="space-y-2">
+              <label
+                className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for=""
+              >
+                If you have to leave town, emergently or planned, where would your pet stay?
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
-                id="password"
-                name="password"
-                value={user.password}
-                onChange={handleInputs}
-
-                placeholder="Enter your password"
+                id=""
+                placeholder=""
                 required=""
-                type="password"
+                type="text"
               />
             </div>
-          </div>
-          
 
-      <button class="bg-green-500 text-white text-2l font-medium px-4 py-2 rounded shadow loginbutton register_button" onClick={PostData}>REGISTER
+          </div>
+          <ul className="list-disc">
+                <li >
+                By clicking the submit button, I agree to go adoption process, will undergo a homecheck, and interview. 
+                </li>
+                <li>
+By clicking the submit button, I understand my references will be checked including veterinary and personal. 
+                </li>
+                <li>
+By clicking the submit button, I understand there is an adoption donation associated with adoption of a pet and that it is tax deductible according to IRS 501(c)3 guidelines.  I understand this donation will ensure the organization is equipped to rescue another homeless pet. 
+                </li>
+                <li>
+By clicking the submit button, I understand there is no "cooling off" period, and that if I no longer want or can no longer care for my adopted pet, I agree to notify Rescue Center. BY EMAIL and provide a 14 day period to allow Rescue Center to make arrangents for my pet to be taken back into rescue. 
+                </li>
+                <li>
+By clicking the submit button, I agree to indemnify and hold harmless the rescue center against any losses, lawsuits, claims, injury, damages incurred by me or to any persons or property by my adopted pet, once adoption has been completed.  
+                </li>
+                <li>
+By clicking the submit button, I understand that Rescue Center will disclose any of the pet's health or behavior issues known by the above named rescue group before adoption is completed. 
+                </li>
+                <li>
+By clicking the submit button, I understand that if I no longer want my pet, or am no longer able to care for my adopted pet, I will be directed to surrender my pet to Rescue Center and provide transport to where Rescue Center deems appropriate.
+                </li>
+                <li>
+By clicking the submit button, I verify all of the above information is true and accurate.  
+                </li>
+            </ul>
+        
+      <button class="bg-green-500 text-white text-2l font-medium px-4 py-2 rounded shadow loginbutton register_button" >SUBMIT ADOPTION FORM
        </button>
-      
         </div>
-      </form>
       </div>
-      </body>
     </div>
-    
-  );
+    </>
+  )
 }
-export default Adopt_signup
