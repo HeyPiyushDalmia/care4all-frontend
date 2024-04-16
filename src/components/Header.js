@@ -52,7 +52,7 @@ export default function Header() {
               </li>
 
               <li>
-                <a href="/elarning" className="navbar_links ">E-LEARNING</a>
+                <a href="/elearning" className="navbar_links ">E-LEARNING</a>
               </li>
 
               <li>
