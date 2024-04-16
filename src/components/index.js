@@ -2,7 +2,7 @@ import React from "react";
 import { IoMdPaw } from "react-icons/io";
 import { TbDog } from "react-icons/tb";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import "swiper/css";
 import herosectionimg from "./../assets/img/herosectionimage2.jpg";
 import home_slider_image1 from "./../assets/img/home-slider-image1.jpg";
 import { useState } from "react";
@@ -23,7 +23,7 @@ function Index() {
     },
   ]);
   return (
-    <main>
+    <>
       {/* Hero section  */}
       <section className="flex flex-wrap bgcolor 2xl">
         <div className="w-full sm:w-8/12 mb-10">
@@ -63,31 +63,29 @@ function Index() {
       {/* Services offered */}
 
       <section>
-        <div className="container mx-auto">
-          <div className="flex justify-center space-x-4 py-8 bg-white">
-            <div className="flex flex-col items-center p-6 space-y-3 rounded-lg shadow-md">
-              <TbDog className="services_icons" />
-              <h3 className="text-lg font-semibold">Comprehensive Listings</h3>
-              <p className="text-sm text-gray-600">
-                Care4All provides a diverse range of animals including dogs,
-                cats, rabbits, birds, and more.{" "}
-              </p>
-            </div>
-            <div className="flex flex-col items-center p-6 space-y-3 rounded-lg shadow-md">
-              <TbDog className="services_icons" />
-              <h3 className="text-lg font-semibold">Adoption</h3>
-              <p className="text-sm text-gray-600">
-                Care4All provides helps and providing save and secure plaform
-                for adoption.
-              </p>
-            </div>
-            <div className="flex flex-col items-center p-6 space-y-3 rounded-lg shadow-md">
-              <TbDog className="services_icons" />
-              <h3 className="text-lg font-semibold">Pet Healthcare</h3>
-              <p className="text-sm text-gray-600">
-                Care4All provides E-Content for pet healthcare{" "}
-              </p>
-            </div>
+        <div class="flex justify-center space-x-4 py-8 bg-white">
+          <div class="flex flex-col items-center p-6 space-y-3 rounded-lg shadow-md">
+            <TbDog className="services_icons" />
+            <h3 className="text-lg font-semibold">Comprehensive Listings</h3>
+            <p className="text-sm text-gray-600">
+              Care4All provides a diverse range of animals including dogs, cats,
+              rabbits, birds, and more.{" "}
+            </p>
+          </div>
+          <div class="flex flex-col items-center p-6 space-y-3 rounded-lg shadow-md">
+            <TbDog className="services_icons" />
+            <h3 className="text-lg font-semibold">Adoption</h3>
+            <p className="text-sm text-gray-600">
+              Care4All provides helps and providing save and secure plaform for
+              adoption.
+            </p>
+          </div>
+          <div className="flex flex-col items-center p-6 space-y-3 rounded-lg shadow-md">
+            <TbDog className="services_icons" />
+            <h3 className="text-lg font-semibold">Pet Healthcare</h3>
+            <p className="text-sm text-gray-600">
+              Care4All provides E-Content for pet healthcare{" "}
+            </p>
           </div>
         </div>
       </section>
@@ -140,10 +138,8 @@ function Index() {
           );
         })}
       </Swiper>
-    </main>
+    </>
   );
 }
 
 export default Index;
-
-//use map, remove <br />, use containers - className="container mx-auto"
