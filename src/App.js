@@ -10,8 +10,11 @@ import Ngo_login from './components/Ngo_login'
 import Dashboard from './components/dashboard'
 import Adopt from './components/adopt'
 import Elearning from './components/elearning'
-
+import Contact from './components/Contact'
 import Ngo_profile from './components/Ngo_profile'
+import Ngo_menu from './components/Ngo_menu'
+import Adopter_menu from './components/Adopter_menu'
+import Ngo_account from './components/Ngo_account'
 import './../src/assets/css/style.css'
 
 import { Routes as Switch, Route, BrowserRouter } from 'react-router-dom';
@@ -23,6 +26,7 @@ function App() {
   return (
     <>
     <Header/>
+    
     <BrowserRouter>
     <Switch>
     <Route path='/' element={<Index/>}/>
@@ -35,6 +39,10 @@ function App() {
     <Route path = "/adopt" element={<Adopt/>}/>
     <Route path = "/elearning" element={<Elearning/>}/>
     <Route path="/Ngo_profile" element={<Ngo_profile/>}/>
+    <Route path = "/contact" element={<Contact/>}/>
+    <Route path = "/menu" element={<Ngo_menu/>}/>
+    <Route path="/adopt_menu" element={<Adopter_menu/>}/>
+    <Route path="Ngo_account" element={<Ngo_account/>}/>
     </Switch>
     </BrowserRouter>
      <Footer/>

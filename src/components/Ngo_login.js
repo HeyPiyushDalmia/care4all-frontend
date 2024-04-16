@@ -37,6 +37,7 @@ export default function Ngo_login() {
                         <input
                             className="login_input"
                             type="password" placeholder="Password" />
+                            <a href="/Ngo_profile">
                         <button
                             className="login_button flex_ic  w-full  hover: ml-auto mr-auto  ">
 
@@ -44,6 +45,7 @@ export default function Ngo_login() {
                                 Log in
                             </span>
                         </button>
+                         </a>
                         <a href="/" className="forget_password">
                                 Forget password
                             </a>
