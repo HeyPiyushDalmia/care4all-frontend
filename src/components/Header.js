@@ -2,25 +2,26 @@ import React from "react";
 import { HiMenu } from "react-icons/hi";
 import logo from "./../assets/img/logo.png";
 import { Link } from "react-router-dom";
+
 export default function Header({ token }) {
   const user = false;
   return (
     <header className="2xl">
       <nav className="navbar lg:px-6 ">
         <div className="flex_ic flex-wrap justify-between mx-auto max-w-screen-xl">
-          <a href="/" className="flex_ic">
+          <Link to="/" className="flex_ic">
             <img src={logo} className="mr-3 h-6 sm:h-9" alt="Website Logo" />
-          </a>
+          </Link>
 
           <div className="flex_ic lg:order-2">
             {token == "true" ? (
-              <a href="/Ngo_account">
+              <Link to="/Ngo_account">
                 <button className="navbar_button ">PROFILE</button>
-              </a>
+              </Link>
             ) : (
-              <a href="/Adopter_login">
+              <Link to="/Adopter_login">
                 <button className="navbar_button">LOGIN</button>
-              </a>
+              </Link>
             )}
 
             <button
@@ -40,33 +41,33 @@ export default function Header({ token }) {
           >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
               <li>
-                <a href="/" className="navbar_links " aria-current="page">
+                <Link to="/" className="navbar_links " aria-current="page">
                   HOME
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="/about" className="navbar_links">
+                <Link to="/about" className="navbar_links">
                   ABOUT
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="/adopt" className="navbar_links ">
+                <Link to="/adopt" className="navbar_links ">
                   ADOPT
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="/elearning" className="navbar_links ">
+                <Link to="/elearning" className="navbar_links ">
                   E-LEARNING
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="/contact" className="navbar_links ">
+                <Link to="/contact" className="navbar_links ">
                   CONTACT US
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
