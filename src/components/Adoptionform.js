@@ -1,32 +1,25 @@
-import React from "react";
-import signup_img1 from '../assets/img/signup_img1.jpg'
-export default function Ngo_signup() {
+import React from 'react'
+
+export default function Adoptionform() {
   return (
-    <div>
-      <body className="adopt_signup_img" style={{ backgroundImage:`url(${signup_img1})` }} >
-      {/* <img src={adopt_signup_img}/> */}
-      <div className="rounded-lg border bg-card text-card-foreground shadow-sm w-full max-w-3xl px-0 adopt_signup_main_div"
+    <>
+      <h1 className="text-center font-semi text-4xl">Pet Adoption Form</h1>
+      <div>
+      <div className="rounded-lg border bg-card text-card-foreground shadow-sm w-full max-w-3xl px-0 adoption-form"
         data-v0-t="card"
       >
-        <div className="flex flex-col space-y-1.5 p-6 border-b adopt_signup_head">
-          <h3 className="font-semibold whitespace-nowrap tracking-tight text-3xl">
-            NGO Registration
-          </h3>
-
-        </div>
         <div className="p-6 space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <label
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="ngoname"
+                for="full-name"
               >
-                NGO Name
+               Perspective Pet Parent
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
-                id="ngoname"
-                name="ngoname"
+                id="full-name"
                 placeholder="Enter your full name"
                 required=""
               />
@@ -34,14 +27,13 @@ export default function Ngo_signup() {
             <div className="space-y-2">
               <label
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="contactnumber"
+                for="phone-number"
               >
                 Contact Number
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="phone-number"
-                name="contactnumber"
                 placeholder="Enter your phone number"
                 type="tel"
                 required=""
@@ -51,14 +43,13 @@ export default function Ngo_signup() {
             <div className="space-y-2">
               <label
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="ngoaddress"
+                for="address"
               >
                 Address
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
-                id="ngoaddress"
-                name="ngoaddress"
+                id="address"
                 placeholder="Enter your address"
                 required=""
               />
@@ -73,7 +64,6 @@ export default function Ngo_signup() {
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="pincode"
-                name="pincode"
                 placeholder="Enter your pincode"
                 required=""
                 size="6"
@@ -89,7 +79,6 @@ export default function Ngo_signup() {
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="state"
-                name="state"
                 placeholder="Enter your state"
                 list="states"
                 required=""
@@ -112,7 +101,6 @@ export default function Ngo_signup() {
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="city"
-                name="city"
                 placeholder="Enter your city"
                 list="cities"
                 required=""
@@ -135,7 +123,6 @@ export default function Ngo_signup() {
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="email"
-                name="email"
                 placeholder="Enter your email"
                 required=""
                 type="email"
@@ -145,43 +132,109 @@ export default function Ngo_signup() {
             <div className="space-y-2">
               <label
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="registerationnumber"
+                for="aadhar"
               >
-                Niti Ayog Registeration Number
+                Name of Pet You Wish to Adopt
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
-                id="registerationnumber"
-                name="registerationnumber"
-                placeholder="Enter NGO registration number given by Niti Ayog "
+                id="aadhar"
+                placeholder="Name of Pet You Wish to Adopt "
                 required=""
+              />
+            </div>
+            
+            <div className="space-y-2">
+              <label
+                className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for=""
+              >
+                Are there children in the home? (If yes, fill)
+              </label>
+              <input
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
+                id=""
+                placeholder=""
+                required=""
+                type="text"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label
+                className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for=""
+              >
+                Will you crate your pet?*
+              </label>
+              <input
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
+                id=""
+                placeholder=""
+                required=""
+                type="text"
               />
             </div>
             <div className="space-y-2">
               <label
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="password"
+                for=""
               >
-                Password
+                How many hours per day would the pet be alone?*
+              </label>
+             <textarea cols="34" rows="2"></textarea>
+            </div>
+            
+
+            <div className="space-y-2">
+              <label
+                className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for=""
+              >
+                If you have to leave town, emergently or planned, where would your pet stay?
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
-                id="password"
-                name="password"
-                placeholder="Enter your password"
+                id=""
+                placeholder=""
                 required=""
-                type="password"
+                type="text"
               />
             </div>
-          </div>
-        
 
-            <button className="bg-green-500 text-white text-2l font-medium px-4 py-2 rounded shadow loginbutton register_button">
-              REGISTER
-            </button>
           </div>
+          <ul className="list-disc">
+                <li >
+                By clicking the submit button, I agree to go adoption process, will undergo a homecheck, and interview. 
+                </li>
+                <li>
+By clicking the submit button, I understand my references will be checked including veterinary and personal. 
+                </li>
+                <li>
+By clicking the submit button, I understand there is an adoption donation associated with adoption of a pet and that it is tax deductible according to IRS 501(c)3 guidelines.  I understand this donation will ensure the organization is equipped to rescue another homeless pet. 
+                </li>
+                <li>
+By clicking the submit button, I understand there is no "cooling off" period, and that if I no longer want or can no longer care for my adopted pet, I agree to notify Rescue Center. BY EMAIL and provide a 14 day period to allow Rescue Center to make arrangents for my pet to be taken back into rescue. 
+                </li>
+                <li>
+By clicking the submit button, I agree to indemnify and hold harmless the rescue center against any losses, lawsuits, claims, injury, damages incurred by me or to any persons or property by my adopted pet, once adoption has been completed.  
+                </li>
+                <li>
+By clicking the submit button, I understand that Rescue Center will disclose any of the pet's health or behavior issues known by the above named rescue group before adoption is completed. 
+                </li>
+                <li>
+By clicking the submit button, I understand that if I no longer want my pet, or am no longer able to care for my adopted pet, I will be directed to surrender my pet to Rescue Center and provide transport to where Rescue Center deems appropriate.
+                </li>
+                <li>
+By clicking the submit button, I verify all of the above information is true and accurate.  
+                </li>
+            </ul>
+        
+      <button class="bg-green-500 text-white text-2l font-medium px-4 py-2 rounded shadow loginbutton register_button" >SUBMIT ADOPTION FORM
+       </button>
         </div>
-      </body>
+      </div>
     </div>
-  );
+    </>
+  )
 }

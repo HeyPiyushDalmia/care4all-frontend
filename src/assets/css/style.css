@@ -127,7 +127,8 @@
   clear: both;
   object-fit: cover;
   height: 600px;
-  width: 96%;
+  width: 96% ;
+
 }
 
 .slider_para {
@@ -399,7 +400,8 @@ p {
   
 } */
 
-.adopt_signup_head{
+.adopt_signup_head
+{
   /* margin-left: auto;
   margin-right: auto;
   display: block;
@@ -409,10 +411,10 @@ p {
   background-color: #eefcff;
   color:#000000;
   
-
 }
-.register_button {
-  margin-left: auto;
+
+.register_button
+{margin-left: auto;
   margin-right: auto;
   display: block;
   width: 60%;
@@ -590,4 +592,83 @@ p {
 }
 .contact-info p{
   width: 70%;
+}
+
+
+.ngo_menu_container
+{
+  background-color: rgba(189, 197, 192, 0.867);
+  width: 100%;
+}
+
+.ngo_menu_ul
+{
+  display: block;
+}
+.ngo_menu_list
+{background-color: rgba(255, 255, 255, 0.867);
+  width: 100%;
+  border-bottom: 1px solid white;
+  /* border-top: 1px solid black; */
+  /* border-right: 1px solid black; */
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size:larger;
+  font-weight: bold;
+  /* margin-bottom: 2px; */
+  height:100px;
+  line-height: 100px;
+  margin-bottom: 10px;
+ 
+
+}
+.ngo_menu_list:hover
+{
+  
+  background-color: #808285;
+  
+
+}
+@media(max-width:800px){
+  .ngo_menu_container
+  {
+      width: 100%;
+  }
+ 
+}
+
+.ngo_Dash
+{
+  display: inline;
+  align-items: center;
+}
+.ngo_table
+{
+  border: 1px solid black;
+}
+.td_head
+{
+  font-weight: 700;
+  background-color: #bbbfc5;
+}
+
+
+.adoption-form
+{
+  margin-top: 10px;
+  margin-bottom: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 80%;
+  height: 50%;
+  justify-self: center;
+  align-self: center;
+  color: #000000;
+  font-size: larger;
+  font-weight: 500;
+  /* background-color: white; */
+  /* mix-blend-mode:luminosity; */
+  
+
 }

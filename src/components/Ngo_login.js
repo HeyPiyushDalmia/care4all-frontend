@@ -25,9 +25,52 @@ export default function Ngo_login() {
                 </button>
               </a>
 
-              <div className="my-5 border-b text-center">
-                <div className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
-                  NGO LOGIN
+                    </div>
+            <div className=" flex flex-col items-center">
+                <div className="w-full flex-1  ">
+                <a  href="/Adopter_login" >
+ <button className="login_button flex_ic       w-48  hover: ml-auto mr-auto" >ADOPTER LOGIN
+   </button>
+   </a> 
+
+                    <div className="my-5 border-b text-center">
+                        <div
+                            className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
+                           NGO LOGIN
+                        </div>
+                    </div>
+
+                    <div className="mx-auto max-w-xs">
+                        <input
+                            className="login_input"
+                            type="text" placeholder="NGO Registration number" />
+                        <input
+                            className="login_input"
+                            type="password" placeholder="Password" />
+                            <a href="/Ngo_profile">
+                        <button
+                            className="login_button flex_ic  w-full  hover: ml-auto mr-auto  ">
+
+                            <span className="ml-">
+                                Log in
+                            </span>
+                        </button>
+                         </a>
+                        <a href="/" className="forget_password">
+                                Forget password
+                            </a>
+
+                            <span className=" border-b text-center block">
+                        <span
+                            className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2 ">
+                           OR
+                        </span>
+                    </span>
+                        
+                    <a href="/Ngo_signup" className="forget_password create_new_account">
+                                Create new account
+                            </a>
+                    </div>
                 </div>
               </div>
 
@@ -75,6 +118,6 @@ export default function Ngo_login() {
           </div>
         </div>
       </div>
-    </div>
+  
   );
 }
