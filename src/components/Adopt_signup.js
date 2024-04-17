@@ -64,7 +64,7 @@ const Adopt_signup = () => {
 
         </div>
 
-        <form method = "POST">
+        <form method = "POST" onSubmit={PostData}>
 
         
         <div className="p-6 space-y-6">
@@ -84,7 +84,7 @@ const Adopt_signup = () => {
       onChange={handleInputs}
       // (e)=>setUser({...user, fullname:e.target.value})
                 placeholder="Enter your full name"
-                required=""
+                required
               />
             </div>
             <div className="space-y-2">
@@ -103,7 +103,7 @@ const Adopt_signup = () => {
                 onChange={handleInputs}
                 placeholder="Enter your phone number"
                 type="tel"
-                required=""
+                required
                 size="10"
               />
             </div>
@@ -122,7 +122,7 @@ const Adopt_signup = () => {
                 onChange={handleInputs}
 
                 placeholder="Enter your address"
-                required=""
+                required
               />
             </div>
             <div className="space-y-2">
@@ -140,7 +140,7 @@ const Adopt_signup = () => {
                 onChange={handleInputs}
 
                 placeholder="Enter your pincode"
-                required=""
+                required
                 size="6"
               />
             </div>
@@ -159,7 +159,7 @@ const Adopt_signup = () => {
                 onChange={handleInputs}
                 placeholder="Enter your state"
                 list="states"
-                required=""
+                required
               />
                <datalist id="states">
                 <option value="Delhi"></option>
@@ -186,7 +186,7 @@ const Adopt_signup = () => {
                 text-black
                 placeholder="Enter your city"
                 list="cities"
-                required=""
+                required
               />
               <datalist id="cities">
                 <option value="Amritsar"></option>
@@ -211,7 +211,7 @@ const Adopt_signup = () => {
                 onChange={handleInputs}
 
                 placeholder="Enter your email"
-                required=""
+                required
                 type="email"
               />
             </div>
@@ -229,7 +229,7 @@ const Adopt_signup = () => {
                 value={user.dob}
                 onChange={handleInputs}
 
-                required=""
+                required
                 type="date"
               />
             </div>
@@ -248,7 +248,7 @@ const Adopt_signup = () => {
                 onChange={handleInputs}
 
                 placeholder="Enter your Aadhar card number"
-                required="required"
+                required
                 type="number"
                  
               />
@@ -268,14 +268,14 @@ const Adopt_signup = () => {
                 onChange={handleInputs}
 
                 placeholder="Enter your password"
-                required=""
+                required
                 type="password"
               />
             </div>
           </div>
           
 
-      <button class="bg-green-500 text-white text-2l font-medium px-4 py-2 rounded shadow loginbutton register_button" onClick={PostData}>REGISTER
+      <button class="bg-green-500 text-white text-2l font-medium px-4 py-2 rounded shadow loginbutton register_button">REGISTER
        </button>
       
         </div>

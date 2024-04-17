@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
@@ -6,7 +6,51 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
-export default function Contact() {
+const Contact =() =>{
+  const [contact,setContact] = useState({
+    name:"",phone:"",email:"",query:""
+  });
+
+  let name, value;
+    const handleInputs = (e) =>
+    {
+      console.log(contact);
+      name =e.target.name;
+       value = e.target.value;
+
+      setContact({...contact, [name]:value});
+    }
+
+    const PostData = async (e) =>
+    {
+      e.preventDefault();
+      const {name, phone, email, query} = contact;
+
+      const res = await fetch("http://localhost:8000/api/Contact",{
+        method: "POST",
+        headers: {
+          "Content-Type" : "application/json"
+        },
+        body: JSON.stringify({
+          name, phone, email,query
+        })
+
+      });
+
+       const data = await res.json();
+       console.log(data);
+      if(res.status === 422 || !data){
+        window.alert("Invalid Registration");
+        console.log("Invalid Registertation");
+      }
+      else{
+        window.alert("Your query has been submitted successfully");
+        console.log("Successful Registertation");
+       
+      }
+
+
+    }
   return (
     <>
     <h1 className="text-center text-4xl font-bold mt-10 mb-10">CONTACT US </h1>
@@ -20,20 +64,24 @@ export default function Contact() {
     <div className=" flex flex-col items-center ">
         <div className="w-full flex-1">
 
-        <form className="mb-6">
+        <form className="mb-6" method="POST">
             <label className="block mb-2"> Full Name:</label>
-            <input type= "text" className="w-full rounded-lg"/>
+            <input type= "text"  id="name" name="name"  value={contact.name}
+                onChange={handleInputs}className="w-full rounded-lg"/>
 
             <label className="block mb-2">Email:</label>
-            <input type="email" className="w-full rounded-lg"/>
+            <input type="email" id="email" name="email" value={contact.email}
+                onChange={handleInputs}className="w-full rounded-lg"/>
             
             <label className="block mb-2">Contact Number : </label>
-            <input type="number" className="w-full rounded-lg"/>
+            <input type="number" id = "phone" value={contact.phone}
+                onChange={handleInputs} name="phone" className="w-full rounded-lg"/>
 
             <label className="block mb-2">Mention your Query: </label>
-            <textarea className="w-full rounded-lg"></textarea>
+            <textarea id="query" name="query" value={contact.query}
+                onChange={handleInputs}className="w-full rounded-lg"></textarea>
 
-      <button class="bg-green-500 text-white text-2l font-medium px-4 py-2 rounded shadow loginbutton register_button mt-5" >SUBMIT </button>
+      <button class="bg-green-500 text-white text-2l font-medium px-4 py-2 rounded shadow loginbutton register_button mt-5" onClick={PostData}>SUBMIT </button>
 
         </form>
         </div>
@@ -76,5 +124,6 @@ export default function Contact() {
     </div>
     </div>
     </>
-  )
+  );
 }
+export default Contact

@@ -16,9 +16,7 @@ import Adopter_dashboard from './components/Adopter_dashboard'
 import './../src/assets/css/style.css'
 
 import { Routes as Switch, Route, BrowserRouter } from 'react-router-dom';
-
-
-
+import Ngo_account from './components/Ngo_account'
 
 function App() {
   return (
@@ -38,6 +36,7 @@ function App() {
     <Route path ="/contact" element={<Contact/>}/>
     <Route path ="/Adoptionform" element={<Adoptionform/>}/>
     <Route path ="/Adopter_dashboard" element={<Adopter_dashboard/>}/>
+    <Route path = "/Ngo_account" element={<Ngo_account/>}/>
     </Switch>
     </BrowserRouter>
      <Footer/>

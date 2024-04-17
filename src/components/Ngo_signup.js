@@ -1,6 +1,55 @@
-import React from "react";
+import React, {useState} from "react";
+import { useNavigate } from "react-router-dom";
 import signup_img1 from '../assets/img/signup_img1.jpg'
-export default function Ngo_signup() {
+const  Ngo_signup = () => {
+  const navigate = useNavigate();
+
+  const [agency,setUser] = useState({
+    name:"",email:"",location:"",register_no:"",contact:"",password:""
+  });
+
+  let name, value;
+    const handleInputs = (e) =>
+    {
+      console.log(agency);
+      name =e.target.name;
+       value = e.target.value;
+
+      setUser({...agency, [name]:value});
+    }
+
+    const PostData = async (e) =>
+    {
+      e.preventDefault();
+      const {name, contact, location, password, email, register_no} = agency;
+      const res = await fetch("http://localhost:8000/api/adoptionAgencies",{
+        method: "POST",
+        headers: {
+          "Content-Type" : "application/json"
+        },
+        body: JSON.stringify({
+          name, contact, location, email, register_no, password
+        })
+
+      });
+
+       const data = await res.json();
+       console.log(data);
+      if(res.status === 422 || !data){
+        window.alert("Invalid Registration");
+        console.log("Invalid Registertation");
+      }
+      else{
+        window.alert("Successful Registration");
+        console.log("Successful Registertation");
+        navigate("/Ngo_login");
+       
+      }
+
+
+
+    }
+
   return (
     <div>
       <body className="adopt_signup_img" style={{ backgroundImage:`url(${signup_img1})` }} >
@@ -14,19 +63,22 @@ export default function Ngo_signup() {
           </h3>
 
         </div>
+        <form method = "POST">
         <div className="p-6 space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <label
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="ngoname"
+                for="name"
               >
                 NGO Name
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
-                id="ngoname"
-                name="ngoname"
+                id="name"
+                name="name"
+                value={agency.name}
+      onChange={handleInputs}
                 placeholder="Enter your full name"
                 required=""
               />
@@ -34,14 +86,16 @@ export default function Ngo_signup() {
             <div className="space-y-2">
               <label
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="contactnumber"
+                for="contact"
               >
                 Contact Number
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
-                id="phone-number"
-                name="contactnumber"
+                id="contact"
+                name="contact"
+                value={agency.contact}
+      onChange={handleInputs}
                 placeholder="Enter your phone number"
                 type="tel"
                 required=""
@@ -51,14 +105,16 @@ export default function Ngo_signup() {
             <div className="space-y-2">
               <label
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="ngoaddress"
+                for="location"
               >
                 Address
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
-                id="ngoaddress"
-                name="ngoaddress"
+                id="location"
+                name="location"
+                value={agency.location}
+      onChange={handleInputs}
                 placeholder="Enter your address"
                 required=""
               />
@@ -136,6 +192,8 @@ export default function Ngo_signup() {
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="email"
                 name="email"
+                value={agency.email}
+      onChange={handleInputs}
                 placeholder="Enter your email"
                 required=""
                 type="email"
@@ -145,14 +203,16 @@ export default function Ngo_signup() {
             <div className="space-y-2">
               <label
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="registerationnumber"
+                for="register_no"
               >
                 Niti Ayog Registeration Number
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
-                id="registerationnumber"
-                name="registerationnumber"
+                id="register_no"
+                name="register_no"
+                value={agency.register_no}
+      onChange={handleInputs}
                 placeholder="Enter NGO registration number given by Niti Ayog "
                 required=""
               />
@@ -168,6 +228,8 @@ export default function Ngo_signup() {
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="password"
                 name="password"
+                value={agency.password}
+      onChange={handleInputs}
                 placeholder="Enter your password"
                 required=""
                 type="password"
@@ -176,11 +238,13 @@ export default function Ngo_signup() {
           </div>
         
 
-      <button class="bg-green-500 text-white text-2l font-medium px-4 py-2 rounded shadow loginbutton register_button" >REGISTER
+      <button class="bg-green-500 text-white text-2l font-medium px-4 py-2 rounded shadow loginbutton register_button" onClick={PostData} >REGISTER
        </button>
         </div>
+        </form>
       </div>
       </body>
     </div>
   );
 }
+export default Ngo_signup

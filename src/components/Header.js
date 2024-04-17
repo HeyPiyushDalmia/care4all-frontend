@@ -13,7 +13,7 @@ export default function Header() {
 
           <div className="flex_ic lg:order-2">
             {
-                user ? <a href="/Adopter_login">
+                user ? <a href="/Adopter_dashboard">
                 <button className="navbar_button ">
                   PROFILE
                 </button>
