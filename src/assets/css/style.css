@@ -1,23 +1,19 @@
-.navbar
-{
+.navbar {
   background-color: #ffffff;
   border-color: #e5e7eb;
-  padding:10px 16px 10px 16px;
+  padding: 10px 16px 10px 16px;
 }
 
-.navbar_links
-{
+.navbar_links {
   display: block;
-  padding: 8px 16px 12px 8px;                         /*top,right,bottom,left */
+  padding: 8px 16px 12px 8px; /*top,right,bottom,left */
   color: #000000;
   background-color: transparent;
   border-radius: 4px;
-
 }
 
-.navbar_button
-{
-  background-color: #FF5A1F;
+.navbar_button {
+  background-color: #ff5a1f;
   color: #ffffff;
   padding: 8px 16px 8px 16px;
   font-size: 16px;
@@ -25,17 +21,17 @@
   margin-left: 10px;
 }
 
-.flex_ic
-{
+.flex_ic {
   display: flex;
   align-items: center;
 }
 
-
 /* INDEX.JSX */
-
-
-
+/* use variable */
+:root {
+  --orange: #ff5a1f;
+  --white: #ffffff;
+}
 
 .logo {
   height: 50px;
@@ -52,13 +48,10 @@
 }
 
 .hero_para {
-  color: rgb(190, 91, 10);
+  color: #be5b0a;
   font-weight: bolder;
   align-content: center;
 }
-
-
-
 
 /* Links inside the dropdown */
 .dropdown-content a {
@@ -69,10 +62,14 @@
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.show {
+  display: block;
+}
 /* .imgsize{
     mix-blend-mode: multiply;
 
@@ -110,15 +107,15 @@
   
 }
 
-.services_icons{
+.services_icons {
   font-size: 30px;
-  color: #ff5a1f;
+  color: var(--orange);
 }
 
 .fabone {
   display: inline;
   font-size: 20px;
-  color: #ff5a1f;
+  color: var(--orange);
 }
 
 .home-about-image {
@@ -126,7 +123,7 @@
   margin-left: 100px;
 }
 
-.slider{
+.slider {
   clear: both;
   object-fit: cover;
   height: 600px;
@@ -134,17 +131,13 @@
 
 }
 
-.slider_para{
+.slider_para {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   /* color: white; */
 }
-
-
-
-
 
 /* ABOUT PAGE */
 
@@ -264,52 +257,48 @@ p {
  margin-bottom: 20px;
 }
 
-.card2{
+.card2 {
   margin-left: 400px;
   margin-top: 10px;
-  
 }
 
 /* login page */
 
-.login_image
-{object-fit: fill;
+.login_image {
+  object-fit: fill;
   height: 600px;
   width: 100%;
-  
 }
 
-.login_input
-{
+.login_input {
   width: 100%;
-  padding:16px 32px 16px 32px;
-  border-radius:8px;
+  padding: 16px 32px 16px 32px;
+  border-radius: 8px;
   font-weight: 500;
-  background-color:#f3f4f6;
+  background-color: #f3f4f6;
   --tw-placeholder-opacity: 1;
-  color:rgb(190, 91, 10, var(--tw-placeholder-opacity));
+  color: rgb(190, 91, 10, var(--tw-placeholder-opacity));
   border-width: 1px;
-  border-color:#f3f4f6;
-  font-size: 14px ;
-  line-height:20px ;
+  border-color: #f3f4f6;
+  font-size: 14px;
+  line-height: 20px;
   outline: 2px solid transparent;
   outline-offset: 2px;
   --tw-border-opacity: 1;
-  border-color:#9ca3af;
+  border-color: #9ca3af;
   --tw-bg-opacity: 1;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
-.signup_input
-{
+.signup_input {
   display: flex;
-  height:40px;
+  height: 40px;
   width: 100%;
-  border-radius:6px;
+  border-radius: 6px;
   border-width: 1px;
-  padding:8px 12px 8px 12px;
-  font-size:  14px ;
-  line-height: 20px ;
+  padding: 8px 12px 8px 12px;
+  font-size: 14px;
+  line-height: 20px;
   border-width: 0px;
   background-color: transparent;
   outline: 2px solid transparent;
@@ -319,28 +308,21 @@ p {
   opacity: 0.5;
 
   color: #000000;
-
- 
-
-
-
 }
 /* ::placeholder {
   color: rgb(122, 122, 122);
   opacity: 1; 
 } */
 
-
-.login_button
-{
-  background-color: #FF5A1F;
+.login_button {
+  background-color: #ff5a1f;
   color: #000000;
   font-weight: 600;
   padding-top: 16px;
   padding-bottom: 16px;
   margin-top: 20px;
   letter-spacing: 0.025em;
-  border-radius:8px;
+  border-radius: 8px;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -355,9 +337,7 @@ p {
   background-color: #71b475 ;  
 }
 
-
-
-.forget_password{
+.forget_password {
   margin-left: auto;
   margin-right: auto;
   justify-self: center;
@@ -368,19 +348,16 @@ p {
   text-align: center;
 }
 
-.forget_password:hover
-{
-color: #ff5a1f;
+.forget_password:hover {
+  color: var(--orange);
 }
 
-.create_new_account
-{
+.create_new_account {
   font-size: 16px;
   margin-top: 10px;
-  
 }
 
-.ngo_Login{
+.ngo_Login {
   margin-left: auto;
   margin-right: auto;
   justify-self: center;
@@ -444,23 +421,12 @@ color: #ff5a1f;
   height: 98%;
   justify-self: center;
   align-self: center;
-/* opacity: 0; */
-
+  /* opacity: 0; */
 }
 
-
-
-
-.cards{
-  flex-direction:row;
+.cards {
+  flex-direction: row;
 }
-
-
-
-
-
-
-
 
 /* footer css */
 
@@ -469,27 +435,24 @@ color: #ff5a1f;
     to bottom,
     
     #f7e0cc,#f0bb89,#ee9849); */
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    clear: both;    
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  clear: both;
 }
-.footer_links
-{
+.footer_links {
   color: #ffffff;
   font-size: 16px;
   line-height: 24px;
-  
 }
 
-.footer_links:hover
-{
-  background-color:#ffffff ;
+.footer_links:hover {
+  background-color: #ffffff;
   color: #000000;
   border-radius: 5px;
   font-weight: 600;
   padding: 5px 5px 5px 5px;
 }
-.footer_icons{
+.footer_icons {
   font-size: 25px;
 }
 

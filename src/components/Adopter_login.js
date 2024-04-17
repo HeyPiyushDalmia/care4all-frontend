@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import logo from './../assets/img/logo.png';
 import loginpageimage from './../assets/img/loginpageimage.jpg';
 
-const Adopter_login = () => {
+const Adopter_login = ({ token1,setToken1 }) => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -52,9 +52,13 @@ const Adopter_login = () => {
             if (res.ok) {
                 const data = await res.json();
                 window.alert("Login Successful");
-                navigate("/Adopter_dashboard");
+                navigate("/");
+                localStorage.setItem("token1", "true");
+                setToken1(localStorage.getItem("token1"))
             } else {
                 window.alert("Invalid Credentials");
+                localStorage.setItem("token1", "false");
+                setToken1(localStorage.getItem("token1"))
             }
         } catch (error) {
             console.error("Error:", error);

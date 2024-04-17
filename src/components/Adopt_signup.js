@@ -277,10 +277,9 @@ const Adopt_signup = () => {
 
       <button class="bg-green-500 text-white text-2l font-medium px-4 py-2 rounded shadow loginbutton register_button">REGISTER
        </button>
-      
+       </div>
+          </form>
         </div>
-      </form>
-      </div>
       </body>
     </div>
     

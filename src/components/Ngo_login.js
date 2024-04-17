@@ -1,69 +1,74 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import logo from './../assets/img/logo.png';
-import { Link } from 'react-router-dom';
-import ngologinpageimage from './../assets/img/ngologinpageimage.jpg';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import logo from "./../assets/img/logo.png";
+import ngologinpageimage from "./../assets/img/ngologinpageimage.jpg";
 
-const Ngo_login = () => {
-    const navigate = useNavigate();
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [errors, setErrors] = useState({ email: '', password: '' });
+const Ngo_login = ({ token,setToken }) => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({ email: "", password: "" });
 
-    const validateInputs = () => {
-        let valid = true;
-        const newErrors = { email: '', password: '' };
+  const validateInputs = () => {
+    let valid = true;
+    const newErrors = { email: "", password: "" };
 
-        if (!email.trim()) {
-            newErrors.email = "Email is required.";
-            valid = false;
-        } else if (!/\S+@\S+\.\S+/.test(email)) {
-            newErrors.email = "Invalid email format.";
-            valid = false;
+    if (!email.trim()) {
+      newErrors.email = "Email is required.";
+      valid = false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = "Invalid email format.";
+      valid = false;
+    }
+
+    if (!password.trim()) {
+      newErrors.password = "Password is required.";
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
+  };
+
+  const loginNGO = async (e) => {
+    e.preventDefault();
+
+    if (!validateInputs()) {
+      return;
+    }
+
+    try {
+      const res = await fetch(
+        "http://localhost:8000/api/adoptionAgencies/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            password,
+          }),
         }
+      );
 
-        if (!password.trim()) {
-            newErrors.password = "Password is required.";
-            valid = false;
-        }
-
-        setErrors(newErrors);
-        return valid;
-    };
-
-    const loginNGO = async (e) => {
-        e.preventDefault();
-
-        if (!validateInputs()) {
-            return;
-        }
-
-        try {
-            const res = await fetch("http://localhost:8000/api/adoptionAgencies/login", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    email,
-                    password
-                })
-            });
-
-            if (res.ok) {
-                const data = await res.json();
-                window.alert("Login Successful");
-                navigate("/Ngo_account");
-                localStorage.setItem("token", "true");
-                localStorage.getItem("token");
-            } else {
-                window.alert("Invalid Credentials");
-            }
-        } catch (error) {
-            console.error("Error:", error);
-            window.alert("An error occurred, please try again later");
-        }
-    };
+      if (res.ok) {
+        const data = await res.json();
+        window.alert("Login Successful");
+        navigate("/");
+        localStorage.setItem("token", "true");
+        setToken(localStorage.getItem("token"))
+      } else {
+        window.alert("Invalid Credentials");
+        localStorage.setItem("token", "false");
+        setToken(localStorage.getItem("token"))
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      window.alert("An error occurred, please try again later");
+    }
+  };
 
     return (
         <div className="min-h-0.5 bg-grey-100 text-gray-900 flex justify-center">
