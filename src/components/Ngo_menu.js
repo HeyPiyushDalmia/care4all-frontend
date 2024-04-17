@@ -8,34 +8,34 @@ export default function Ngo_menu() {
   return (
     <>
   
-    <div className='ngo_menu_container'>
+    <div className='  ml-10 rounded-lg mb-20 '>
           <a href='/Ngo_account' >
-            <div className='ngo_menu_list'>
+            <div className='w-full flex flex-col items-center ngo_menu_list'>
            
-              <FaUserCircle className=" text-4xl inline-flex  " />
+              <FaUserCircle className="w-50 flex-1 text-4xl inline-flex  " />
             
-              <h3 className='inline-flex  leading-10'>My Account</h3>
+              <h3 className='inline-flex  leading-10 mb-5'>My Account</h3>
             </div>
           </a>
 
         <a href=''>
-          <div className='ngo_menu_list'>            
-                <CgAddR className=" text-4xl inline-flex " />
-                <h3  className='inline-flex '>Add Pet</h3>              
+          <div className='w-full flex flex-col items-center  ngo_menu_list'>            
+                <CgAddR className="w-50 flex-1 text-4xl inline-flex " />
+                <h3  className='inline-flex leading-10 mb-5'>Add Pet</h3>              
           </div>
         </a>
         
         <a href=''>
-        <div className='ngo_menu_list'>            
-              <AiFillDelete className=" text-4xl inline-flex  "  />
-              <h3 className='inline-flex  '>Delete Pet</h3>
+        <div className='w-full flex flex-col items-center  ngo_menu_list'>            
+              <AiFillDelete className="w-50 flex-1 text-4xl inline-flex  "  />
+              <h3 className='inline-flex  leading-10 mb-5'>Delete Pet</h3>
         </div>
         </a>
 
         <a href=''>
-        <div className='ngo_menu_list'>            
-              <IoLogOutOutline className=" text-4xl inline-flex  "  />
-              <h3 className='inline-flex '>Logout</h3>            
+        <div className='w-full flex flex-col items-center  ngo_menu_list'>            
+              <IoLogOutOutline className="w-50 flex-1 text-4xl inline-flex  "  />
+              <h3 className='inline-flex leading-10 mb-5'>Logout</h3>            
         </div>
         </a>
     </div>

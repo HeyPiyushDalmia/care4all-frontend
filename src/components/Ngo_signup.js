@@ -19,13 +19,14 @@ export default function Ngo_signup() {
             <div className="space-y-2">
               <label
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="full-name"
+                for="ngoname"
               >
                 NGO Name
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
-                id="full-name"
+                id="ngoname"
+                name="ngoname"
                 placeholder="Enter your full name"
                 required=""
               />
@@ -33,13 +34,14 @@ export default function Ngo_signup() {
             <div className="space-y-2">
               <label
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="phone-number"
+                for="contactnumber"
               >
                 Contact Number
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="phone-number"
+                name="contactnumber"
                 placeholder="Enter your phone number"
                 type="tel"
                 required=""
@@ -49,13 +51,14 @@ export default function Ngo_signup() {
             <div className="space-y-2">
               <label
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="address"
+                for="ngoaddress"
               >
                 Address
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
-                id="address"
+                id="ngoaddress"
+                name="ngoaddress"
                 placeholder="Enter your address"
                 required=""
               />
@@ -70,6 +73,7 @@ export default function Ngo_signup() {
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="pincode"
+                name="pincode"
                 placeholder="Enter your pincode"
                 required=""
                 size="6"
@@ -85,6 +89,7 @@ export default function Ngo_signup() {
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="state"
+                name="state"
                 placeholder="Enter your state"
                 list="states"
                 required=""
@@ -107,6 +112,7 @@ export default function Ngo_signup() {
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="city"
+                name="city"
                 placeholder="Enter your city"
                 list="cities"
                 required=""
@@ -129,6 +135,7 @@ export default function Ngo_signup() {
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="email"
+                name="email"
                 placeholder="Enter your email"
                 required=""
                 type="email"
@@ -138,13 +145,14 @@ export default function Ngo_signup() {
             <div className="space-y-2">
               <label
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="aadhar"
+                for="registerationnumber"
               >
                 Niti Ayog Registeration Number
               </label>
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
-                id="aadhar"
+                id="registerationnumber"
+                name="registerationnumber"
                 placeholder="Enter NGO registration number given by Niti Ayog "
                 required=""
               />
@@ -159,6 +167,7 @@ export default function Ngo_signup() {
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="password"
+                name="password"
                 placeholder="Enter your password"
                 required=""
                 type="password"
