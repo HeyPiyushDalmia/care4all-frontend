@@ -186,8 +186,8 @@ p {
 .card_main_div
 {
   margin-top: 20px;
-  border: 2px solid red;
-  background-color: yellow;
+  /* border: 2px solid red;
+  background-color: yellow; */
   display:flex;
   /* width: fit-content; */
   width: 100%;
@@ -208,8 +208,8 @@ p {
 
 .about_cards
 {
-  background-color: green;
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  /* background-color: green; */
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
   padding: 10px;
   margin-bottom: 10px;
   text-align: center;

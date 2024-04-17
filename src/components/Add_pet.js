@@ -1,21 +1,12 @@
 import React from 'react'
-import { FaMapMarkedAlt } from "react-icons/fa";
 import Ngo_menu from './Ngo_menu';
-export default function Add_pet() {
+const Add_pet = () => {
   return (
    
     <div className="min-h-0.5 bg-grey-100 text-gray-900 flex justify-center">
     <div className="max-w-screen-l m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
     
-    {/* <div className="lg:w-auto  p-6 sm:p-12  ml-10 rounded-lg mb-20"> 
-    <div className=" flex flex-col items-center ">
-        <div className="w-50 flex-1"> */}
         <Ngo_menu/>
-
-{/* </div>
-</div>
-</div> */}
-
     <div className="flex-1 text-center hidden lg:flex min-h-0.5 ">
       <div className=" flex flex-col gap-8 m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat">
         <div className=''>
@@ -37,7 +28,7 @@ export default function Add_pet() {
                 id="name"
                 name="name"
                 placeholder="Enter pet name"
-                required=""
+                required
                 type='text'
               />
             </div>
@@ -82,7 +73,7 @@ export default function Add_pet() {
 
             <div className="space-y-2">
               <label
-                className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                className="text-sm font-bold leading-none  peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 for="gender"
               >
                 Gender
@@ -91,11 +82,9 @@ export default function Add_pet() {
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="gender" 
                 name="gender"
-             
-                text-black
                 placeholder="Select Gender"
                 list="genders"
-                required=""
+                required
               />
               <datalist id="genders">
                 <option value="Male"></option>
@@ -117,7 +106,7 @@ export default function Add_pet() {
                 id="color"
                 name="color"              
                 placeholder="Enter pet color"
-                required=""                
+                required               
               />
             </div>
 
@@ -158,7 +147,7 @@ export default function Add_pet() {
                 id="image"
                 name="image"   
                 type="file"
-                required=""                
+                required          
               />
             </div>
 
@@ -182,3 +171,4 @@ export default function Add_pet() {
 
   )
 }
+export default Add_pet

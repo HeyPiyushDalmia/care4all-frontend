@@ -1,7 +1,8 @@
 import React from "react";
 import { HiMenu } from "react-icons/hi";
 import logo from "./../assets/img/logo.png";
-export default function Header() {
+import { Link } from "react-router-dom";
+export default function Header({ token }) {
   const user = false;
   return (
     <header className="2xl">
@@ -12,18 +13,16 @@ export default function Header() {
           </a>
 
           <div className="flex_ic lg:order-2">
-            {
-                user ? <a href="/Adopter_login">
-                <button className="navbar_button ">
-                  PROFILE
-                </button>
-              </a> : <a href="/Adopter_login">
-                <button className="navbar_button">
-                  LOGIN
-                </button>
+            {token == "true" ? (
+              <a href="/Ngo_account">
+                <button className="navbar_button ">PROFILE</button>
               </a>
-            }
-          
+            ) : (
+              <a href="/Adopter_login">
+                <button className="navbar_button">LOGIN</button>
+              </a>
+            )}
+
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
@@ -32,33 +31,43 @@ export default function Header() {
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
-              <HiMenu className="logo"/>
+              <HiMenu className="logo" />
             </button>
           </div>
-          <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
-            id="mobile-menu-2">
+          <div
+            className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+            id="mobile-menu-2"
+          >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-
               <li>
-                <a href="/" className="navbar_links " aria-current="page">HOME</a>
+                <a href="/" className="navbar_links " aria-current="page">
+                  HOME
+                </a>
               </li>
 
               <li>
-                <a href="/about" className="navbar_links">ABOUT</a>
+                <a href="/about" className="navbar_links">
+                  ABOUT
+                </a>
               </li>
 
               <li>
-                <a href="/adopt" className="navbar_links ">ADOPT</a>
+                <a href="/adopt" className="navbar_links ">
+                  ADOPT
+                </a>
               </li>
 
               <li>
-                <a href="/elearning" className="navbar_links ">E-LEARNING</a>
+                <a href="/elearning" className="navbar_links ">
+                  E-LEARNING
+                </a>
               </li>
 
               <li>
-                <a href="/contact" className="navbar_links ">CONTACT US</a>
+                <a href="/contact" className="navbar_links ">
+                  CONTACT US
+                </a>
               </li>
-
             </ul>
           </div>
         </div>

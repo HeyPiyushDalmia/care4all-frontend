@@ -1,8 +1,74 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "./../assets/img/logo.png";
 import ngologinpageimage from "./../assets/img/ngologinpageimage.jpg";
 
-export default function Ngo_login() {
+const Ngo_login = ({ token,setToken }) => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({ email: "", password: "" });
+
+  const validateInputs = () => {
+    let valid = true;
+    const newErrors = { email: "", password: "" };
+
+    if (!email.trim()) {
+      newErrors.email = "Email is required.";
+      valid = false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = "Invalid email format.";
+      valid = false;
+    }
+
+    if (!password.trim()) {
+      newErrors.password = "Password is required.";
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
+  };
+
+  const loginNGO = async (e) => {
+    e.preventDefault();
+
+    if (!validateInputs()) {
+      return;
+    }
+
+    try {
+      const res = await fetch(
+        "http://localhost:8000/api/adoptionAgencies/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            password,
+          }),
+        }
+      );
+
+      if (res.ok) {
+        const data = await res.json();
+        window.alert("Login Successful");
+        navigate("/Ngo_account");
+        localStorage.setItem("token", "true");
+        setToken(localStorage.getItem("token"))
+      } else {
+        window.alert("Invalid Credentials");
+        localStorage.setItem("token", "false");
+        setToken(localStorage.getItem("token"))
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      window.alert("An error occurred, please try again later");
+    }
+  };
+
   return (
     <div className="min-h-0.5 bg-grey-100 text-gray-900 flex justify-center">
       <div className="max-w-screen-l m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
@@ -13,91 +79,65 @@ export default function Ngo_login() {
               disabled
             >
               <div className="bg-white p-2 rounded-full">
-                <img src={logo} alt="Logo is not found"></img>
+                <img src={logo} alt="Logo is not found" />
               </div>
             </button>
           </div>
-          <div className=" flex flex-col items-center">
-            <div className="w-full flex-1  ">
+          <div className="flex flex-col items-center">
+            <div className="w-full flex-1">
               <a href="/Adopter_login">
-                <button className="login_button flex_ic       w-48  hover: ml-auto mr-auto">
+                <button class="login_button flex_ic w-48  hover: ml-auto mr-auto">
                   ADOPTER LOGIN
                 </button>
               </a>
-
-                    </div>
-            <div className=" flex flex-col items-center">
-                <div className="w-full flex-1  ">
-                <a  href="/Adopter_login" >
- <button className="login_button flex_ic       w-48  hover: ml-auto mr-auto" >ADOPTER LOGIN
-   </button>
-   </a> 
-
-                    <div className="my-5 border-b text-center">
-                        <div
-                            className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
-                           NGO LOGIN
-                        </div>
-                    </div>
-
-                    <div className="mx-auto max-w-xs">
-                        <input
-                            className="login_input"
-                            type="text" placeholder="NGO Registration number" />
-                        <input
-                            className="login_input"
-                            type="password" placeholder="Password" />
-                            <a href="/Ngo_profile">
-                        <button
-                            className="login_button flex_ic  w-full  hover: ml-auto mr-auto  ">
-
-                            <span className="ml-">
-                                Log in
-                            </span>
-                        </button>
-                         </a>
-                        <a href="/" className="forget_password">
-                                Forget password
-                            </a>
-
-                            <span className=" border-b text-center block">
-                        <span
-                            className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2 ">
-                           OR
-                        </span>
-                    </span>
-                        
-                    <a href="/Ngo_signup" className="forget_password create_new_account">
-                                Create new account
-                            </a>
-                    </div>
+              <div className="my-5 border-b text-center">
+                <div className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
+                  NGO LOGIN
                 </div>
               </div>
-
               <div className="mx-auto max-w-xs">
-                <input
-                  className="login_input"
-                  type="text"
-                  placeholder="NGO Registration number"
-                />
-                <input
-                  className="login_input"
-                  type="password"
-                  placeholder="Password"
-                />
-                <button className="login_button flex_ic  w-full  hover: ml-auto mr-auto  ">
-                  <span className="ml-">Log in</span>
-                </button>
+                <form method="POST" id="Ngo-login">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className={`login_input ${
+                      errors.email && "border-red-500"
+                    }`}
+                    placeholder="NGO Email"
+                    required=""
+                  />
+                  {errors.email && (
+                    <p className="text-red-500 text-base">{errors.email}</p>
+                  )}
+                  <input
+                    className={`login_input ${
+                      errors.password && "border-red-500"
+                    }`}
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Password"
+                    required
+                  />
+                  {errors.password && (
+                    <p className="text-red-500 text-base">{errors.password}</p>
+                  )}
+                  <button
+                    className="login_button flex_ic  w-full  hover: ml-auto mr-auto  "
+                    onClick={loginNGO}
+                  >
+                    <span className="ml-">Log in</span>
+                  </button>
+                </form>
                 <a href="/" className="forget_password">
                   Forget password
                 </a>
-
                 <span className=" border-b text-center block">
                   <span className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2 ">
                     OR
                   </span>
                 </span>
-
                 <a
                   href="/Ngo_signup"
                   className="forget_password create_new_account"
@@ -118,6 +158,8 @@ export default function Ngo_login() {
           </div>
         </div>
       </div>
-  
+    </div>
   );
-}
+};
+
+export default Ngo_login;
