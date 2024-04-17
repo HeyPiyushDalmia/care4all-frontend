@@ -1,6 +1,10 @@
 import React from "react";
 import about_img1 from "../assets/img/about_img1.jpg";
-import about_card1 from "../assets/img/about_card1.jpg";
+import about_card1 from "../assets/img/about_card11.jpg";
+import about_card2 from "../assets/img/about_card2.jpg";
+import about_card3 from "../assets/img/about_card3.jpg";
+
+
 
 export default function About() {
   return (
@@ -20,8 +24,8 @@ export default function About() {
       
 
       <div>
-        <h2 className="about_main_heading text-center">---WHAT IS Care4All??---</h2>
-        <p>
+        <h2 className="about_main_heading text-center "> Care4All</h2>
+        <p className="text-lg mr-auto ml-auto">
           At Care4All, we believe that every pet deserves a loving home and
           every home deserves the joy that comes with a furry, feathered, or
           scaly friend. Our mission is to facilitate the perfect match between
@@ -59,7 +63,7 @@ export default function About() {
               <span className="text-lg font-bold">1</span>
             </div>
             </div>
-           <p>Piyush Dalmia MCA Jagan institute of managementt studies rohini sec 5</p>
+           <p className="text-center text-lg font-bold">Find Your Pet</p>
            </div> 
         {/* </div> */}
         
@@ -67,14 +71,14 @@ export default function About() {
           <div className="relative bg-orange-50 p-6 rounded-lg shadow-lg flex items-center justify-center w-[300px] h-[250px]">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="rounded-full border-4 border-[#FFA500] flex items-center justify-center w-[220px] h-[220px">
-                <img src={about_card1} alt="Man with dog" className="rounded-full about_image_card"/>
+                <img src={about_card2} alt="Man with dog" className="rounded-full about_image_card"/>
               </div>
             </div>
             <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-white rounded-full shadow-lg flex items-center justify-center w-12 h-12  border-500 ">
               <span className="text-lg font-bold">2</span>
             </div>
           </div>
-          <p>Piyush Dalmia MCA Jagan institute of managementt studies rohini sec 5</p>
+          <p className="text-center text-lg font-bold">Know Your Pet</p>
 
         </div>
 
@@ -82,14 +86,14 @@ export default function About() {
           <div className="relative bg-orange-50 p-6 rounded-lg shadow-lg flex items-center justify-center w-[300px] h-[250px]">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="rounded-full border-4 border-[#FFA500] flex items-center justify-center w-[220px] h-[220px">
-                <img src={about_card1} alt="Man with dog" className="rounded-full about_image_card"/>
+                <img src={about_card3} alt="Man with dog" className="rounded-full about_image_card"/>
               </div>
             </div>
             <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-white rounded-full shadow-lg flex items-center justify-center w-12 h-12  border-500 ">
               <span className="text-lg font-bold">3</span>
             </div>
           </div>
-          <p>Piyush Dalmia MCA Jagan institute of managementt studies rohini sec 5</p>
+          <p className="text-center text-lg font-bold">Take Your Pet Home</p>
 
         </div>
       {/* </div> */}

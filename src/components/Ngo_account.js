@@ -1,10 +1,11 @@
 import React from 'react'
-// import about_img from "../assets/img/about_img1.jpg";
-// import Ngo_menu from './Ngo_menu';
+
+import about_img from "../assets/img/about_img1.jpg";
+import Ngo_menu from './Ngo_menu';
 export default function Ngo_account() {
   return (
     <>
-    {/* <Ngo_menu/> */}
+    <Ngo_menu/>
 
       <div className='ngo dash'>
       {/* <img

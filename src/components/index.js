@@ -6,6 +6,7 @@ import "swiper/css";
 import herosectionimg from "./../assets/img/herosectionimage2.jpg";
 import bestthingpetimg from "./../assets/img/home_knowyourpet.jpg"
 import home_slider_image1 from "./../assets/img/home-slider-image1.jpg";
+// import about_card1 from "../assets/img/about_card2.jpg";
 import { useState } from "react";
 
 function Index() {
@@ -68,7 +69,7 @@ function Index() {
           <div class="flex flex-col items-center p-6 space-y-3 rounded-lg shadow-md">
             <TbDog className="services_icons" />
             <h3 className="text-lg font-semibold">Comprehensive Listings</h3>
-            <p className="text-sm text-gray-600">
+            <p className="text-base text-gray-600">
               Care4All provides a diverse range of animals including dogs, cats,
               rabbits, birds, and more.{" "}
             </p>
@@ -76,7 +77,7 @@ function Index() {
           <div class="flex flex-col items-center p-6 space-y-3 rounded-lg shadow-md">
             <TbDog className="services_icons" />
             <h3 className="text-lg font-semibold">Adoption</h3>
-            <p className="text-sm text-gray-600">
+            <p className="text-base text-gray-600">
               Care4All provides helps and providing save and secure plaform for
               adoption.
             </p>
@@ -84,7 +85,7 @@ function Index() {
           <div className="flex flex-col items-center p-6 space-y-3 rounded-lg shadow-md">
             <TbDog className="services_icons" />
             <h3 className="text-lg font-semibold">Pet Healthcare</h3>
-            <p className="text-sm text-gray-600">
+            <p className="text-base text-gray-600">
               Care4All provides E-Content for pet healthcare{" "}
             </p>
           </div>
@@ -104,12 +105,12 @@ function Index() {
         <div className="home-margin-elements">
 
         <h1 className="home-about-heading">The Best For Your Pet</h1>
-        <p className="home-about-para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dicta,
-          dolorem velit eaque impedit inventore unde ab voluptates? Eaque
-          aliquam amet fuga perspiciatis vitae corporis doloribus ex dolor illum
-          soluta!
-        </p>
+        <p className="home-about-para text-lg mb-4">
+        At Care4All, we prioritize providing the best care and support
+        for every animal. We understand that adopting a pet is a significant decision,
+        and we are committed to ensuring that each pet finds a loving and nurturing
+        forever home.From personalized matching to ongoing guidance and support,
+        we are here to help you give your pet the best life possible.</p>
         <ol>
           <li className="home-about-para"> 
             <IoMdPaw className="fabone" /> <span> Nutritious Diet </span>
@@ -144,6 +145,9 @@ function Index() {
           );
         })}
       </Swiper>
+      <div className="mb-10">
+
+      </div>
     </>
   );
 }

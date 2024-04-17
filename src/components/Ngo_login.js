@@ -53,6 +53,8 @@ const Ngo_login = () => {
                 const data = await res.json();
                 window.alert("Login Successful");
                 navigate("/Ngo_account");
+                localStorage.setItem("token", "true");
+                localStorage.getItem("token");
             } else {
                 window.alert("Invalid Credentials");
             }
@@ -132,6 +134,7 @@ const Ngo_login = () => {
                 <div className="flex-1 bg-orange-200 text-center hidden lg:flex ">
                     <div className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat">
                         <img src={ngologinpageimage} alt="login page customimage not found" className="login_image" />
+
                     </div>
                 </div>
             </div>
