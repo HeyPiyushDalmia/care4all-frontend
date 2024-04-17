@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from './../assets/img/logo.png';
+import { Link } from 'react-router-dom';
 import ngologinpageimage from './../assets/img/ngologinpageimage.jpg';
 
 const Ngo_login = () => {
@@ -78,10 +79,10 @@ const Ngo_login = () => {
                     </div>
                     <div className="flex flex-col items-center">
                         <div className="w-full flex-1">
-                        <a  href="/Adopter_login" >
+                        <Link  to="/Adopter_login" >
      <button class="login_button flex_ic w-48  hover: ml-auto mr-auto" >ADOPTER LOGIN
        </button>
-       </a> 
+       </Link> 
                             <div className="my-5 border-b text-center">
                                 <div
                                     className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
@@ -115,18 +116,18 @@ const Ngo_login = () => {
                                         <span className="ml-">Log in</span>
                                     </button>
                                 </form>
-                                <a href="/" className="forget_password">
+                                <Link to="/" className="forget_password">
                                     Forget password
-                                </a>
+                                </Link>
                                 <span className=" border-b text-center block">
                                     <span
                                         className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2 ">
                                         OR
                                     </span>
                                 </span>
-                                <a href="/Ngo_signup" className="forget_password create_new_account">
+                                <Link to="/Ngo_signup" className="forget_password create_new_account">
                                     Create new account
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

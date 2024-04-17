@@ -64,24 +64,24 @@ const Contact =() =>{
     <div className=" flex flex-col items-center ">
         <div className="w-full flex-1">
 
-        <form className="mb-6" method="POST">
+        <form className="mb-6" method="POST" onSubmit={PostData}>
             <label className="block mb-2"> Full Name:</label>
             <input type= "text"  id="name" name="name"  value={contact.name}
-                onChange={handleInputs}className="w-full rounded-lg"/>
+                onChange={handleInputs}className="w-full rounded-lg" required/>
 
             <label className="block mb-2">Email:</label>
             <input type="email" id="email" name="email" value={contact.email}
-                onChange={handleInputs}className="w-full rounded-lg"/>
+                onChange={handleInputs}className="w-full rounded-lg" required/>
             
             <label className="block mb-2">Contact Number : </label>
             <input type="number" id = "phone" value={contact.phone}
-                onChange={handleInputs} name="phone" className="w-full rounded-lg"/>
+                onChange={handleInputs} name="phone" className="w-full rounded-lg" required/>
 
             <label className="block mb-2">Mention your Query: </label>
             <textarea id="query" name="query" value={contact.query}
-                onChange={handleInputs}className="w-full rounded-lg"></textarea>
+                onChange={handleInputs}className="w-full rounded-lg" required></textarea>
 
-      <button class="bg-green-500 text-white text-2l font-medium px-4 py-2 rounded shadow loginbutton register_button mt-5" onClick={PostData}>SUBMIT </button>
+      <button class="bg-green-500 text-white text-2l font-medium px-4 py-2 rounded shadow loginbutton register_button mt-5">SUBMIT </button>
 
         </form>
         </div>
