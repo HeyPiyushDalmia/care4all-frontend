@@ -102,9 +102,10 @@ const Adopt_signup = () => {
                 value={user.phonenumber}
                 onChange={handleInputs}
                 placeholder="Enter your phone number"
-                type="tel"
+                type="number"
                 required
                 size="10"
+                
               />
             </div>
             <div className="space-y-2">
@@ -120,8 +121,8 @@ const Adopt_signup = () => {
                 name="address"
                 value={user.address}
                 onChange={handleInputs}
-
                 placeholder="Enter your address"
+                type="text"
                 required
               />
             </div>
@@ -138,7 +139,7 @@ const Adopt_signup = () => {
                 name="pincode"
                 value={user.pincode}
                 onChange={handleInputs}
-
+                type="text"
                 placeholder="Enter your pincode"
                 required
                 size="6"

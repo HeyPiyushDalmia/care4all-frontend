@@ -10,7 +10,7 @@ export default function Adopter_menu() {
  <>
    
    <div className='  ml-10 rounded-lg mb-20 '>
-          <Link to='/Ngo_account' >
+          <Link to='/Adopter_account' >
             <div className='w-full flex flex-col items-center ngo_menu_list'>
            
               <FaUserCircle className="w-50 flex-1 text-4xl inline-flex  " />

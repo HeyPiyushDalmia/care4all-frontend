@@ -19,6 +19,7 @@ import Ngo_account from "./components/Ngo_account";
 import Adoptionform from "./components/Adoptionform";
 import Adopter_dashboard from "./components/Adopter_dashboard";
 import Add_pet from "./components/Add_pet";
+import Adopter_account from "./components/Adopter_account";
 
 import "./../src/assets/css/style.css";
 
@@ -50,7 +51,6 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/adopt" element={<Adopt />} />
           <Route path="/elearning" element={<Elearning />} />
-
           <Route path="/Ngo_profile" element={<Ngo_profile />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/menu" element={<Ngo_menu />} />
@@ -63,6 +63,8 @@ function App() {
           <Route path="/Ngo_account" element={<Ngo_account />} />
           <Route path="/Add_pet" element={<Add_pet />} />
           <Route path="/Add_branch" element={<Add_branch />} />
+          <Route path="/Adopter_account" element={<Adopter_account />} />
+
         </Switch>
       </BrowserRouter>
       <Footer />
