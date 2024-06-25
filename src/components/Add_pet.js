@@ -1,6 +1,55 @@
-import React from 'react'
+import React,{useState} from 'react'
+import { useNavigate } from "react-router-dom";
 import Ngo_menu from './Ngo_menu';
 const Add_pet = () => {
+  const navigate = useNavigate();
+
+  const [petList,setPet] = useState({
+    name:"",age:"",species:"",gender:"",color:"",size:"",photos:""
+  });
+
+  let name, value;
+    const handleInputs = (e) =>
+    {
+      console.log(petList);
+      name =e.target.name;
+       value = e.target.value;
+
+      setPet({...petList, [name]:value});
+    }
+
+    const PostData = async (e) =>
+    {
+      e.preventDefault();
+      const {name, age, species, gender, color, size, photos} = petList;
+
+      const res = await fetch("http://localhost:8000/api/pet",{
+        method: "POST",
+        headers: {
+          "Content-Type" : "application/json"
+        },
+        body: JSON.stringify({
+          name, age, species, gender, color, size, photos
+        })
+
+      });
+
+       const data = await res.json();
+       console.log(data);
+      if(res.status === 422 || !data){
+        window.alert("Invalid data");
+        console.log("Invalid data");
+      }
+      else{
+        window.alert("Successful Pet Added");
+        console.log("Successful Pet Added");
+        navigate("/");
+       
+      }
+
+
+
+    }
   return (
    
     <div className="min-h-0.5 bg-grey-100 text-gray-900 flex justify-center">
@@ -11,7 +60,7 @@ const Add_pet = () => {
       <div className=" flex flex-col gap-8 m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat">
         <div className=''>
        
-<form method = "POST">
+<form method = "POST"  onSubmit={PostData}>
 
         
         <div className="p-6 space-y-6">
@@ -27,6 +76,8 @@ const Add_pet = () => {
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="name"
                 name="name"
+                value={petList.name}
+      onChange={handleInputs}
                 placeholder="Enter pet name"
                 required
                 type='text'
@@ -44,7 +95,9 @@ const Add_pet = () => {
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 Age
                 id="age"
-                name="age"   
+                name="age" 
+                value={petList.age}
+      onChange={handleInputs}  
                 type='number'
                 size="1"
                 maxLength="1"           
@@ -63,7 +116,9 @@ const Add_pet = () => {
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="species"
-                name="species"              
+                name="species" 
+                value={petList.species}
+      onChange={handleInputs}             
                 placeholder="Enter pet species"
                 type='text'
                 required=""
@@ -82,6 +137,8 @@ const Add_pet = () => {
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="gender" 
                 name="gender"
+                value={petList.gender}
+      onChange={handleInputs}
                 placeholder="Select Gender"
                 list="genders"
                 required
@@ -104,7 +161,9 @@ const Add_pet = () => {
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 Color
                 id="color"
-                name="color"              
+                name="color"  
+                value={petList.color}
+      onChange={handleInputs}            
                 placeholder="Enter pet color"
                 required               
               />
@@ -121,7 +180,8 @@ const Add_pet = () => {
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 id="size"
                 name="size"
-                
+                value={petList.size}
+      onChange={handleInputs}
                 placeholder="Enter your size"
                 list="sizes"
                 required=""
@@ -144,8 +204,10 @@ const Add_pet = () => {
               <input
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                 Image
-                id="image"
-                name="image"   
+                id="photos"
+                name="photos" 
+                value={petList.photos}
+      onChange={handleInputs}  
                 type="file"
                 required          
               />
@@ -154,7 +216,7 @@ const Add_pet = () => {
           </div>
           
 
-      <button class="bg-green-500 text-white text-2l font-medium px-4 py-2 rounded shadow loginbutton register_button" >REGISTER
+      <button class="bg-green-500 text-white text-2l font-medium px-4 py-2 rounded shadow loginbutton register_button" >ADD PET
        </button>
       
         </div>

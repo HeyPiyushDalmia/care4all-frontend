@@ -102,7 +102,7 @@ const Ngo_signup = () => {
                     value={agency.contact}
                     onChange={handleInputs}
                     placeholder="Enter your phone number"
-                    type="tel"
+                    type="number"
                     required=""
                     size="10"
                   />
@@ -117,6 +117,7 @@ const Ngo_signup = () => {
                   <input
                     className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                     id="location"
+                    type="text"
                     name="location"
                     value={agency.location}
                     onChange={handleInputs}
@@ -134,6 +135,7 @@ const Ngo_signup = () => {
                   <input
                     className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                     id="pincode"
+                    type="number"
                     name="pincode"
                     placeholder="Enter your pincode"
                     required=""
@@ -150,6 +152,7 @@ const Ngo_signup = () => {
                   <input
                     className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                     id="state"
+                    type="text"
                     name="state"
                     placeholder="Enter your state"
                     list="states"
@@ -173,6 +176,7 @@ const Ngo_signup = () => {
                   <input
                     className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                     id="city"
+                    type="text"
                     name="city"
                     placeholder="Enter your city"
                     list="cities"
@@ -215,6 +219,7 @@ const Ngo_signup = () => {
                   <input
                     className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                     id="register_no"
+                    type="number"
                     name="register_no"
                     value={agency.register_no}
                     onChange={handleInputs}

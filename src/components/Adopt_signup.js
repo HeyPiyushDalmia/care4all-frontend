@@ -139,7 +139,7 @@ const Adopt_signup = () => {
                 name="pincode"
                 value={user.pincode}
                 onChange={handleInputs}
-                type="text"
+                type="number"
                 placeholder="Enter your pincode"
                 required
                 size="6"
