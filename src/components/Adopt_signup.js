@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
-import signup_img3 from '../assets/img/signup_img3.jpg'
 const Adopt_signup = () => {
   const navigate = useNavigate();
 
@@ -51,8 +50,8 @@ const Adopt_signup = () => {
 
     }
   return (
-    <div>
-      <body className="adopt_signup_img" style={{ backgroundImage:`url(${signup_img3})` }} >
+    <div body className="adopt_signup_img h-max bg-black"  >
+      {/* <body className="adopt_signup_img h-max" style={{ backgroundImage:`url(${signup_img3})` }} > */}
       {/* <img src={adopt_signup_img}/> */}
       <div className="rounded-lg border bg-card text-card-foreground shadow-sm w-full max-w-3xl px-0 adopt_signup_main_div"
         data-v0-t="card"
@@ -281,7 +280,7 @@ const Adopt_signup = () => {
        </div>
           </form>
         </div>
-      </body>
+      {/* </body> */}
     </div>
     
   );

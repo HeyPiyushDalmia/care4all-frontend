@@ -14,15 +14,6 @@ function Index() {
     {
       img: home_slider_image1,
     },
-    {
-      img: herosectionimg,
-    },
-    {
-      img: home_slider_image1,
-    },
-    {
-      img: home_slider_image1,
-    },
   ]);
   return (
     <>
@@ -94,37 +85,39 @@ function Index() {
 
       <br />
 
-      {/* Brief About the website */}
-    
-      <div className="home-about">
-      <img
-          src={bestthingpetimg}
-          className="home-about-image"
-          alt=""
-          />        
-        <div className="home-margin-elements">
+        <section className="">
+<div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <h2 className="text-2xl font-extrabold text-black sm:text-3xl text-center mb-6  ">The Best For Your Pet</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
+            <div className="mt-12 md:mt-0">
+            <img src={bestthingpetimg} alt="Know your pet" className="object-cover rounded-lg mix-blend-multiply"/>
+           
+             
+            </div>
+            
+                <div className="">
+                <p className="mt-4 text-black text-lg ">At Care4All, we prioritize providing the best care and support for every animal. We understand that adopting a pet is a significant decision, and we are committed to ensuring that each pet finds a  loving and nurturing forever home.From personalized matching to ongoing guidance and support, we are here to help you give your pet the best life possible.:</p>
 
-        <h1 className="home-about-heading">The Best For Your Pet</h1>
-        <p className="home-about-para text-lg mb-4">
-        At Care4All, we prioritize providing the best care and support
-        for every animal. We understand that adopting a pet is a significant decision,
-        and we are committed to ensuring that each pet finds a loving and nurturing
-        forever home.From personalized matching to ongoing guidance and support,
-        we are here to help you give your pet the best life possible.</p>
-        <ol>
-          <li className="home-about-para"> 
+                <div className="mt-4 text-black text-lg ">
+                <ol>
+          <li > 
             <IoMdPaw className="fabone" /> <span> Nutritious Diet </span>
           </li>
-          <li className="home-about-para">
+          <li >
             <IoMdPaw className="fabone" />{" "}
             <span> Regular Veterinary Care </span>
           </li>
-          <li className="home-about-para"> 
+          <li > 
             <IoMdPaw className="fabone" /> <span> Grooming and Hygiene</span>
           </li>
         </ol>
+     </div>
+          
+            </div>
+            </div>
         </div>
-        </div>
+    
+</section>
       
       <br />
 
@@ -135,19 +128,18 @@ function Index() {
         slidesPerView={1}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
-        className="slider"
+        className="slider h-max mb-5"
+        style={{height:"max-content"}}
       >
         {slider.map((item, i) => {
           return (
-            <SwiperSlide>
-              <img src={item.img} alt="home slider imagesssss" />
+            <SwiperSlide >
+              <img src={item.img} alt="home slider imagesssss" className="object-contain" />
             </SwiperSlide>
           );
         })}
       </Swiper>
-      <div className="mb-10">
-
-      </div>
+     
     </>
   );
 }

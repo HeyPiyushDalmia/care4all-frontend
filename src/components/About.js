@@ -3,6 +3,7 @@ import about_img1 from "../assets/img/about_img1.jpg";
 import about_card1 from "../assets/img/about_card11.jpg";
 import about_card2 from "../assets/img/about_card2.jpg";
 import about_card3 from "../assets/img/about_card3.jpg";
+const dealerLogos = [about_card1, about_card2, about_card3]
 
 
 
@@ -47,59 +48,18 @@ export default function About() {
         </p>
       </div>
       
- <div className="card_main_div">
 
-     
-      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}} className="ml-65 about_cards">
-        
-        <div style = {{height: '40%', width: '100%'}}>
-          <div className="relative bg-orange-50 p-6 rounded-lg shadow-lg flex items-center justify-center w-[300px] h-[250px]">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="rounded-full border-4 border-[#FFA500] flex items-center justify-center w-[220px] h-[220px">
-                <img src={about_card1} alt="Man with dog" className="rounded-full about_image_card"/>
+ <section className="py-12 md:py-16">
+            <div className="container mx-auto px-4 md:px-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-3 gap-6">
+                {dealerLogos.map((logo, index) => (
+                  <div key={index} className="bg-white rounded-lg shadow-md flex items-center justify-center p-2">
+                    <img src={logo} alt={`Dealer Logo ${index + 1}`} className="h-72 object-contain" />
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-white rounded-full shadow-lg flex items-center justify-center w-12 h-12  border-500 ">
-              <span className="text-lg font-bold">1</span>
-            </div>
-            </div>
-           <p className="text-center text-lg font-bold">Find Your Pet</p>
-           </div> 
-        {/* </div> */}
-        
-        <div style={{height: '40%', width: '100%'}}>
-          <div className="relative bg-orange-50 p-6 rounded-lg shadow-lg flex items-center justify-center w-[300px] h-[250px]">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="rounded-full border-4 border-[#FFA500] flex items-center justify-center w-[220px] h-[220px">
-                <img src={about_card2} alt="Man with dog" className="rounded-full about_image_card"/>
-              </div>
-            </div>
-            <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-white rounded-full shadow-lg flex items-center justify-center w-12 h-12  border-500 ">
-              <span className="text-lg font-bold">2</span>
-            </div>
-          </div>
-          <p className="text-center text-lg font-bold">Know Your Pet</p>
-
-        </div>
-
-        <div style={{height: '40%', width: '100%'}}>
-          <div className="relative bg-orange-50 p-6 rounded-lg shadow-lg flex items-center justify-center w-[300px] h-[250px]">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="rounded-full border-4 border-[#FFA500] flex items-center justify-center w-[220px] h-[220px">
-                <img src={about_card3} alt="Man with dog" className="rounded-full about_image_card"/>
-              </div>
-            </div>
-            <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-white rounded-full shadow-lg flex items-center justify-center w-12 h-12  border-500 ">
-              <span className="text-lg font-bold">3</span>
-            </div>
-          </div>
-          <p className="text-center text-lg font-bold">Take Your Pet Home</p>
-
-        </div>
-      {/* </div> */}
-
- </div>    
- </div>
+          </section>
 
     </>
   );

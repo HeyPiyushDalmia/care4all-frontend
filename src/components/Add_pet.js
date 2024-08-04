@@ -1,11 +1,12 @@
 import React,{useState} from 'react'
 import { useNavigate } from "react-router-dom";
+
 import Ngo_menu from './Ngo_menu';
 const Add_pet = () => {
   const navigate = useNavigate();
 
   const [petList,setPet] = useState({
-    name:"",age:"",species:"",gender:"",color:"",size:"",photos:""
+    name:"",age:"",species:"",gender:"",color:"",discription:"",size:"",photos:""
   });
 
   let name, value;
@@ -21,7 +22,7 @@ const Add_pet = () => {
     const PostData = async (e) =>
     {
       e.preventDefault();
-      const {name, age, species, gender, color, size, photos} = petList;
+      const {name, age, species, gender, color, discription, size, photos} = petList;
 
       const res = await fetch("http://localhost:8000/api/pet",{
         method: "POST",
@@ -29,7 +30,7 @@ const Add_pet = () => {
           "Content-Type" : "application/json"
         },
         body: JSON.stringify({
-          name, age, species, gender, color, size, photos
+          name, age, species, gender, color, discription, size, photos
         })
 
       });
@@ -59,6 +60,7 @@ const Add_pet = () => {
     <div className="flex-1 text-center hidden lg:flex min-h-0.5 ">
       <div className=" flex flex-col gap-8 m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat">
         <div className=''>
+          <h2>ADD PET</h2>
        
 <form method = "POST"  onSubmit={PostData}>
 
@@ -193,7 +195,25 @@ const Add_pet = () => {
                 <option value="Unknown" ></option>
                 </datalist>
             </div>    
-
+            <div className="space-y-2">
+              <label
+                className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="description"
+              >
+                description
+              </label>
+              <textArea
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-black"
+                Color
+                id="discription"
+                name="discription"  
+                value={petList.discription}
+      onChange={handleInputs}            
+                placeholder="Enter pet description"
+                rows="4" cols="50"
+                required               
+              ></textArea>
+            </div>
             <div className="space-y-2">
               <label
                 className="text-sm font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
