@@ -11,7 +11,7 @@ export default function Adopt() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("http://localhost:8000/api/pet");
+        const response = await axios.get("https://care4all-backend.vercel.app/api/pet");
         setData(response.data);
         setLoading(false);
         console.log(response.data);

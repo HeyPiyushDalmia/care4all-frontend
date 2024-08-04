@@ -20,7 +20,7 @@ const Add_branch = () => {
       e.preventDefault();
       const {fullname, phonenumber, address, pincode, state, city, email, aadhar, password} = user;
 
-      const res = await fetch("http://localhost:8000/api/users",{
+      const res = await fetch("https://care4all-backend.vercel.app/api/users",{
         method: "POST",
         headers: {
           "Content-Type" : "application/json"

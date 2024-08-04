@@ -24,7 +24,7 @@ const Add_pet = () => {
       e.preventDefault();
       const {name, age, species, gender, color, discription, size, photos} = petList;
 
-      const res = await fetch("http://localhost:8000/api/pet",{
+      const res = await fetch("https://care4all-backend.vercel.app/api/pet",{
         method: "POST",
         headers: {
           "Content-Type" : "application/json"

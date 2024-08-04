@@ -26,7 +26,7 @@ const Contact =() =>{
       e.preventDefault();
       const {name, phone, email, query} = contact;
 
-      const res = await fetch("http://localhost:8000/api/Contact",{
+      const res = await fetch("https://care4all-backend.vercel.app/api/Contact",{
         method: "POST",
         headers: {
           "Content-Type" : "application/json"

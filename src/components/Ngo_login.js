@@ -40,7 +40,7 @@ const Ngo_login = ({ token,setToken }) => {
 
     try {
       const res = await fetch(
-        "http://localhost:8000/api/adoptionAgencies/login",
+        "https://care4all-backend.vercel.app/api/adoptionAgencies/login",
         {
           method: "POST",
           headers: {

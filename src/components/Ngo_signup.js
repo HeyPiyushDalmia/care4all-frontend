@@ -25,7 +25,7 @@ const Ngo_signup = () => {
   const PostData = async (e) => {
     e.preventDefault();
     const { name, contact, location, password, email, register_no } = agency;
-    const res = await fetch("http://localhost:8000/api/adoptionAgencies", {
+    const res = await fetch("https://care4all-backend.vercel.app/api/adoptionAgencies", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

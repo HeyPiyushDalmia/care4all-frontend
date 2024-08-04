@@ -38,7 +38,7 @@ const Adopter_login = ({ token1,setToken1 }) => {
         }
 
         try {
-            const res = await fetch("http://localhost:8000/api/users/login", {
+            const res = await fetch("https://care4all-backend.vercel.app/api/users/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
